@@ -1,6 +1,6 @@
 @echo off
 chcp 65001 >nul
-setlocal
+setlocal enabledelayedexpansion
 
 echo ========================================================
 echo   萬聖節活動專案 - 一鍵推送至 GitHub (Rotary-Happy-Halloween)
@@ -18,11 +18,10 @@ echo [1/4] 檢查 Git 工作區狀態...
 git status --short
 
 echo.
+set "COMMIT_MSG="
 set /p COMMIT_MSG="請輸入本次提交摘要（直接按 Enter 則使用自動時間戳記）: "
 if "%COMMIT_MSG%"=="" (
-    for /f "tokens=1-3 delims=/ " %%a in ('date /t') do set CDATE=%%a-%%b-%%c
-    for /f "tokens=1-2 delims=: " %%a in ('time /t') do set CTIME=%%a:%%b
-    set COMMIT_MSG=update: !CDATE! !CTIME!
+    for /f "usebackq delims=" %%i in (`powershell -NoProfile -Command "Get-Date -Format 'yyyy-MM-dd HH:mm:ss'"`) do set "COMMIT_MSG=update: %%i"
 )
 
 echo.
@@ -35,7 +34,7 @@ git commit -m "%COMMIT_MSG%"
 
 echo.
 echo [4/4] 推送至 GitHub (origin main)...
-git push -u origin main
+git push origin main
 
 if %ERRORLEVEL% EQU 0 (
     echo.
