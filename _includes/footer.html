@@ -1,0 +1,165 @@
+<footer class="site-footer" id="site-footer">
+  <!-- Footer 上緣裝飾掛線與 3522 數字公仔 -->
+  <div class="footer-hanging-decor">
+    <div class="footer-hanging-line"></div>
+    <div class="footer-hanging-digits">
+      <div class="hanging-item" title="國際扶輪 3522 地區 - 3">
+        <span class="hanging-thread"></span>
+        <img src="{{ '/assets/images/digit_3.webp' | relative_url }}" alt="扶輪 3522 數字 3 公仔" class="hanging-digit-img" loading="lazy">
+      </div>
+      <div class="hanging-item" title="國際扶輪 3522 地區 - 5">
+        <span class="hanging-thread"></span>
+        <img src="{{ '/assets/images/digit_5.webp' | relative_url }}" alt="扶輪 3522 數字 5 公仔" class="hanging-digit-img" loading="lazy">
+      </div>
+      <div class="hanging-item" title="國際扶輪 3522 地區 - 2">
+        <span class="hanging-thread"></span>
+        <img src="{{ '/assets/images/digit_2a.webp' | relative_url }}" alt="扶輪 3522 數字 2 公仔" class="hanging-digit-img" loading="lazy">
+      </div>
+      <div class="hanging-item" title="國際扶輪 3522 地區 - 2">
+        <span class="hanging-thread"></span>
+        <img src="{{ '/assets/images/digit_2b.webp' | relative_url }}" alt="扶輪 3522 數字 2 公仔" class="hanging-digit-img" loading="lazy">
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-container">
+    <!-- 全區會場平面配置地圖與交通導航（兩區合併） -->
+    <div class="footer-map-section">
+      <div class="footer-section-title-wrap">
+        <h3 class="footer-heading">台北市昌隆198公園 全區動線與交通指南</h3>
+        <p class="footer-subheading">活動定位地址：台北市大安區市民大道三段198號 ｜ 2026年10月24日（六）11:00～17:00</p>
+      </div>
+
+      <!-- 交通指南兩區合併整合卡片 -->
+      <div class="footer-merged-card">
+        <!-- 1. 平面配置圖展示區 -->
+        <div class="footer-venue-block">
+          <div class="footer-block-header">
+            <h4 class="footer-card-title">🗺️ 會場全區平面配置圖</h4>
+          </div>
+          <div class="footer-venue-big-box">
+            <img src="{{ '/assets/images/venue-map.webp' | relative_url }}" alt="台北市昌隆198公園全區平面配置圖" class="footer-venue-big-img" loading="lazy">
+          </div>
+          <p class="footer-map-caption">
+            ▲ 會場重點動線與設施：主舞台、鬼靈精怪走秀星光伸展台、小鬼市集與園遊會美食手作帳篷、草坪大地闖關遊戲區、大會諮詢服務處、專屬變裝更衣帳篷與救護醫療站。
+          </p>
+        </div>
+
+        <!-- 區塊分隔線 -->
+        <hr class="footer-card-divider">
+
+        <!-- 2. 即時導航與交通指引區（顯著 Google 地圖按鈕 + 嵌入地圖 + 大眾運輸與停車） -->
+        <div class="footer-traffic-block">
+          <div class="footer-block-header">
+            <h4 class="footer-card-title">📍 即時導航與交通指引</h4>
+          </div>
+
+          <!-- 超明顯 Google 地圖開啟按鈕 (顯著重點 CTA) -->
+          <div class="footer-gmap-btn-wrap">
+            <a href="https://www.google.com/maps/search/?api=1&query=%E5%8F%B0%E5%8C%97%E5%B8%82%E5%A4%A7%E5%AE%89%E5%8D%80%E5%B8%82%E6%B0%91%E5%A4%A7%E9%81%93%E4%B8%89%E6%AE%B5198%E8%99%9F" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="btn-open-gmap" 
+               title="開啟 Google 地圖進行即時路線導航">
+              <span class="gmap-btn-icon">🗺️</span>
+              <div class="gmap-btn-content">
+                <span class="gmap-btn-title">立即開啟 Google 地圖導航</span>
+                <span class="gmap-btn-desc">點擊開啟導航：台北市大安區市民大道三段198號 ↗</span>
+              </div>
+              <span class="gmap-btn-arrow">➔</span>
+            </a>
+          </div>
+
+          <!-- 地圖嵌入與大眾運輸 / 停車詳細資訊雙欄排版 -->
+          <div class="footer-traffic-content-grid">
+            <!-- Google 地圖嵌入（以精確地址定位） -->
+            <div class="footer-map-embed-wrapper">
+              <iframe
+                title="台北市大安區市民大道三段198號活動地圖"
+                src="https://maps.google.com/maps?q=%E5%8F%B0%E5%8C%97%E5%B8%82%E5%A4%A7%E5%AE%89%E5%8D%80%E5%B8%82%E6%B0%91%E5%A4%A7%E9%81%93%E4%B8%89%E6%AE%B5198%E8%99%9F&hl=zh-TW&z=16&output=embed"
+                width="100%" height="320" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+
+            <!-- 捷運、公車與停車資訊（避免粗體字） -->
+            <div class="footer-transit-details">
+              <div class="transit-row">
+                <span class="transit-icon">🚇</span>
+                <div>
+                  <span class="transit-label">捷運系統：</span>
+                  <span>
+                    • 忠孝新生站 4 號出口（板南線 / 中和新蘆線）：沿新生南路往北至市民大道三段右轉，步行約 8～10 分鐘。<br>
+                    • 忠孝復興站 1 號出口（板南線 / 文湖線）：沿安東街往北至市民大道三段左轉，步行約 8～9 分鐘。
+                  </span>
+                </div>
+              </div>
+
+              <div class="transit-row">
+                <span class="transit-icon">🚌</span>
+                <div>
+                  <span class="transit-label">公車路線：</span>
+                  <span>
+                    • 忠泰美術館站（下車即達活動現場）：可搭乘 669、919。<br>
+                    • 正義郵局站（忠孝東路三段）：搭乘 忠孝幹線、204、212、212直、232副、262、262區、299、600、605、919，沿安東街步行約 7 分鐘。<br>
+                    • 台北科技大學站（建國南路）：搭乘 202區、298、298區、紅57，步行約 5 分鐘。
+                  </span>
+                </div>
+              </div>
+
+              <div class="transit-row">
+                <span class="transit-icon">🚗</span>
+                <div>
+                  <span class="transit-label">周邊停車：</span>
+                  <span>
+                    • Times 市民大道三段停車場：市民大道三段198號地下室 B3（活動地點棟內地下停車場，24小時車牌辨識）。<br>
+                    • 市民大道地下停車場（建國-復興段）：市民大道三段地下室，車位眾多，步出地下街即達公園。<br>
+                    • 建國高架橋下停車場：建國南路與市民大道交口周邊，步行約 3～5 分鐘。
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="footer-divider">
+
+    <!-- 主辦聲明與連結 -->
+    <div class="footer-info-row">
+      <div class="footer-col-brand">
+        <div class="footer-brand-header">
+          <img src="{{ '/assets/images/footer-logo-2.webp' | relative_url }}" alt="國際扶輪3522地區官方標誌" class="footer-brand-logo">
+          <div class="footer-brand-text">
+            <span class="footer-org-name">國際扶輪3522地區</span>
+            <span class="footer-event-name">萬聖節嘉年華會</span>
+          </div>
+        </div>
+        <p class="footer-tagline-text">扶輪大手牽小手 ｜ 因為好玩、因為值得、因此再度投入！</p>
+      </div>
+
+      <div class="footer-col-nav">
+        <h4>網站導覽</h4>
+        <ul class="footer-menu">
+          {% for link in site.navigation %}
+          {% unless link.url contains 'carnival-stalls' or link.title contains '園遊' %}
+          <li><a href="{{ link.url | relative_url }}">{{ link.title }}</a></li>
+          {% endunless %}
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div class="footer-col-org">
+        <h4>主辦與合辦陣容</h4>
+        <p>主辦單位：國際扶輪 3522 地區、天際社、環球社、忠孝社、同領社</p>
+        <p>合辦指導：台北市政府社會局、大安區昌隆里辦公處、T3ex TEC、汐游寶寶</p>
+        <p>榮譽贊助：財團法人旺台環境文化&文化教育基金會、台北市護照扶輪社</p>
+      </div>
+    </div>
+
+    <!-- 版權聲明 -->
+    <div class="footer-bottom-bar">
+      <p>© 2026 國際扶輪 3522 地區 版權所有 ｜ 扶輪精神 × 萬聖趣味 × 社區共創</p>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,84 @@
+<header class="site-header">
+  <nav class="navbar" id="navbar" aria-label="全站主要導覽">
+    <div class="nav-container">
+      <div class="nav-brand-group">
+        <a href="{{ '/' | relative_url }}" class="nav-logo" title="回到首頁">
+          <img src="{{ '/assets/images/logo.webp' | relative_url }}" alt="2026扶輪大手牽小手 慈善萬聖節嘉年華" class="nav-logo-img">
+        </a>
+
+        <!-- 3522 四顆排列小圖 (上下隨機跳躍) -->
+        <div class="header-3522-group" id="header3522Group" title="國際扶輪 3522 地區">
+          <img src="{{ '/assets/images/digit_3.webp' | relative_url }}" alt="扶輪 3522 數字 3" class="header-digit-img">
+          <img src="{{ '/assets/images/digit_5.webp' | relative_url }}" alt="扶輪 3522 數字 5" class="header-digit-img">
+          <img src="{{ '/assets/images/digit_2a.webp' | relative_url }}" alt="扶輪 3522 數字 2" class="header-digit-img">
+          <img src="{{ '/assets/images/digit_2b.webp' | relative_url }}" alt="扶輪 3522 數字 2" class="header-digit-img">
+        </div>
+      </div>
+
+      <!-- 行動裝置漢堡按鈕 -->
+      <button class="hamburger" id="hamburger" aria-label="開啟選單" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-links" id="nav-links">
+        {% for link in site.navigation %}
+        {% unless link.url contains 'carnival-stalls' or link.title contains '園遊' %}
+        <li>
+          <a href="{{ link.url | relative_url }}" class="{% if link.highlight %}nav-btn-highlight{% endif %} {% if page.url == link.url or page.url == link.url | append: '.html' %}active{% endif %}">
+            {% if link.highlight %}📢 {% endif %}{{ link.title }}
+          </a>
+        </li>
+        {% endunless %}
+        {% endfor %}
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
+
+  if (hamburger && navLinks) {
+    hamburger.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      hamburger.classList.toggle('open', isOpen);
+      hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        hamburger.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+
+  // 3522 四顆排列小圖 隨機跳躍控制
+  (function() {
+    const digits = document.querySelectorAll('.header-digit-img');
+    if (!digits.length) return;
+
+    function triggerRandomJump() {
+      // 隨機選 1~2 隻小圖觸發驚喜高跳
+      const count = Math.random() > 0.65 ? 2 : 1;
+      for (let i = 0; i < count; i++) {
+        const idx = Math.floor(Math.random() * digits.length);
+        const el = digits[idx];
+        el.classList.remove('hop-jump');
+        void el.offsetWidth; // 強制重繪
+        el.classList.add('hop-jump');
+        setTimeout(() => el.classList.remove('hop-jump'), 700);
+      }
+      // 隨機間隔 800ms ~ 2400ms 發動下一次跳躍
+      const delay = Math.floor(Math.random() * 1600) + 800;
+      setTimeout(triggerRandomJump, delay);
+    }
+
+    // 啟動隨機跳躍
+    setTimeout(triggerRandomJump, 1000);
+  })();
+</script>

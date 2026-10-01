@@ -1,0 +1,263 @@
+---
+layout: default
+title: 舞台表演與魔幻綜藝
+description: 2026年國際扶輪3522地區萬聖節嘉年華會・舞台表演與魔幻綜藝！專業街頭藝人表演小冰綜藝特技秀、魔幻特務馬拉將、扯鈴彩虹龍，還有金氏世界紀錄保持人展現溜溜球神技，節目將精彩非凡！
+---
+
+<!-- AEO Schema.org 結構化語意標記 -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "舞台表演與魔幻綜藝 ｜ 國際扶輪3522地區萬聖節嘉年華會",
+  "startDate": "2026-10-24T11:00:00+08:00",
+  "endDate": "2026-10-24T17:00:00+08:00",
+  "location": {
+    "@type": "Place",
+    "name": "台北市昌隆198公園",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "市民大道三段198號",
+      "addressLocality": "大安區",
+      "addressRegion": "台北市",
+      "addressCountry": "TW"
+    }
+  }
+}
+</script>
+
+<div class="page-hero">
+  <div class="container">
+    <h1 class="page-hero-title">🎪 舞台表演與魔幻綜藝</h1>
+    <p class="page-hero-desc">專業街頭藝人表演小冰綜藝特技秀、魔幻特務馬拉將、扯鈴彩虹龍，還有金氏世界紀錄保持人展現溜溜球神技，節目將精彩非凡！</p>
+  </div>
+</div>
+
+<!-- 全日舞台節目時程表 -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">全日舞台節目時程表</h2>
+      <p class="section-desc">10 月 24 日活動當天 11:00 至 16:00 主舞台精彩演出與抽獎時程</p>
+    </div>
+
+    <!-- 主持人向左對齊資訊欄 -->
+    <div class="schedule-hosts-bar">
+      <div class="schedule-host-item">
+        <span class="schedule-host-badge">🎙️ 上半場主持</span>
+        <span class="schedule-host-names">101扶輪社 PP Angela ＆ 元宇宙扶輪社 PP David</span>
+      </div>
+      <div class="schedule-host-item">
+        <span class="schedule-host-badge">🎙️ 下半場主持</span>
+        <span class="schedule-host-names">大仁扶輪社 Annie ＆ 環球扶輪社 Charlie</span>
+      </div>
+    </div>
+
+    <div class="schedule-table-card">
+      <table class="schedule-table">
+        <thead>
+          <tr>
+            <th style="width: 170px;">時間</th>
+            <th>流程項目與精采內容</th>
+            <th>主責／出場人員</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for item in site.data.timeline.schedule %}
+          <tr class="{% if item.title contains '開幕' or item.title contains '蔣萬安' or item.title contains '啟動' or item.title contains '頒獎' or item.title contains '抽獎' %}schedule-highlight-row{% endif %}">
+            <td class="schedule-time-col">{{ item.time }}</td>
+            <td>{{ item.title }}</td>
+            <td style="color: var(--text-muted);">{{ item.performers }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- 五大星級藝人圖文詳介 -->
+<section class="section section-alt" id="performers-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">五大星級藝人與表演團體</h2>
+      <p class="section-desc">頂尖街頭藝術家震撼齊聚！翻轉極限、奇幻大氣球、世界紀錄與歡笑奇蹟！</p>
+    </div>
+
+    <div class="performer-showcase-list">
+      <!-- 1. 小冰 -->
+      <div class="performer-showcase-card">
+        <div class="performer-gallery">
+          <div class="gallery-main">
+            <img src="{{ '/assets/images/image56.webp' | relative_url }}" alt="小冰極限街頭特技" loading="lazy">
+          </div>
+          <div class="gallery-thumbs">
+            <div class="gallery-thumb">
+              <img src="{{ '/assets/images/image57.webp' | relative_url }}" alt="小冰疊筒高空平衡" loading="lazy">
+            </div>
+            <div class="gallery-thumb">
+              <img src="{{ '/assets/images/image58.webp' | relative_url }}" alt="小冰倒立翻轉特技" loading="lazy">
+            </div>
+          </div>
+        </div>
+        <div class="performer-info">
+          <div class="performer-meta">
+            <span class="performer-badge">🎪 極限街頭特技</span>
+            <span class="performer-time">🕒 演出時間：12:40 – 13:10</span>
+          </div>
+          <h3 class="performer-name">小冰</h3>
+          <p class="performer-subtitle">極限平衡與翻轉震撼街頭特技</p>
+          <p class="performer-desc">用身體挑戰極限的頂尖街頭藝人！翻轉、平衡、速度與力量，每一個驚險刺激的動作都讓人屏息驚嘆。小冰用特技點燃全場狂熱氣氛，把街道化為舞台，把驚呼化為雷動掌聲！</p>
+          <div class="performer-tags">
+            <span class="performer-tag">極限平衡</span>
+            <span class="performer-tag">凌空倒立</span>
+            <span class="performer-tag">高空疊筒</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. 馬拉將 -->
+      <div class="performer-showcase-card">
+        <div class="performer-gallery">
+          <div class="gallery-main">
+            <img src="{{ '/assets/images/image61.webp' | relative_url }}" alt="魔幻特務馬拉將大氣球秀" loading="lazy">
+          </div>
+          <div class="gallery-thumbs">
+            <div class="gallery-thumb">
+              <img src="{{ '/assets/images/performer-balloon.webp' | relative_url }}" alt="魔幻特務馬拉將歡樂互動" loading="lazy">
+            </div>
+            <div class="gallery-thumb">
+              <img src="{{ '/assets/images/image60.webp' | relative_url }}" alt="魔幻特務馬拉將特務造型" loading="lazy">
+            </div>
+          </div>
+        </div>
+        <div class="performer-info">
+          <div class="performer-meta">
+            <span class="performer-badge">🎈 奇幻大氣球互動秀</span>
+            <span class="performer-time">🕒 演出時間：13:10 – 13:40</span>
+          </div>
+          <h3 class="performer-name">魔幻特務 馬拉將</h3>
+          <p class="performer-subtitle">人入巨型氣球幽默互動視覺秀</p>
+          <p class="performer-desc">想像一個超大的氣球，竟然能將整個人完整裝進去！這不是傳統魔術，而是一場結合幽默、戲劇與驚奇的視覺饗宴，全場孩子的最愛。</p>
+          <div class="performer-tags">
+            <span class="performer-tag">巨型氣球</span>
+            <span class="performer-tag">特務魔幻</span>
+            <span class="performer-tag">全場爆笑互動</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. 賴彥璋 -->
+      <div class="performer-showcase-card">
+        <div class="performer-gallery">
+          <div class="gallery-main">
+            <img src="{{ '/assets/images/image63.webp' | relative_url }}" alt="扯鈴彩虹龍賴彥璋巨型七彩龍" loading="lazy">
+          </div>
+          <div class="gallery-thumbs">
+            <div class="gallery-thumb">
+              <img src="{{ '/assets/images/image64.webp' | relative_url }}" alt="扯鈴彩虹龍旋轉神技" loading="lazy">
+            </div>
+            <div class="gallery-thumb">
+              <img src="{{ '/assets/images/image65.webp' | relative_url }}" alt="創新民俗雜技舞台風采" loading="lazy">
+            </div>
+          </div>
+        </div>
+        <div class="performer-info">
+          <div class="performer-meta">
+            <span class="performer-badge">🐉 創新民俗飛天雜技</span>
+            <span class="performer-time">🕒 演出時間：13:50 – 14:20</span>
+          </div>
+          <h3 class="performer-name">扯鈴彩虹龍 賴彥璋</h3>
+          <p class="performer-subtitle">18公尺巨型七彩舞龍創新雜技</p>
+          <p class="performer-desc">將傳統民俗技藝扯鈴與巨型彩帶舞龍結合的創新雜技表演！利用扯鈴的強烈旋轉動力，操控長達 12 至 18 公尺以上的巨型七彩龍身在空中飛舞、盤旋如生。</p>
+          <div class="performer-tags">
+            <span class="performer-tag">七彩彩虹龍</span>
+            <span class="performer-tag">高速扯鈴</span>
+            <span class="performer-tag">飛天雜技</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. 楊元慶 -->
+      <div class="performer-showcase-card">
+        <div class="performer-gallery">
+          <div class="gallery-main">
+            <img src="{{ '/assets/images/image68.webp' | relative_url }}" alt="金氏世界紀錄溜溜球表演藝術家楊元慶" loading="lazy">
+          </div>
+          <div class="gallery-thumbs">
+            <div class="gallery-thumb">
+              <img src="{{ '/assets/images/image66.webp' | relative_url }}" alt="楊元慶舞台精湛溜溜球神技" loading="lazy">
+            </div>
+            <div class="gallery-thumb">
+              <img src="{{ '/assets/images/image67.webp' | relative_url }}" alt="楊元慶夜光街頭藝術" loading="lazy">
+            </div>
+          </div>
+        </div>
+        <div class="performer-info">
+          <div class="performer-meta">
+            <span class="performer-badge">🪀 溜溜球街頭表演藝術家</span>
+            <span class="performer-time">🕒 演出時間：14:20 – 14:40</span>
+          </div>
+          <h3 class="performer-name">金氏世界紀錄 楊元慶</h3>
+          <p class="performer-subtitle">戲劇與街頭藝術極致・世界冠軍之光</p>
+          <p class="performer-desc">知名的溜溜球表演藝術家、金氏世界紀錄保持人與街頭藝人。8歲接觸溜溜球、14歲立志成為專業選手，多年來將溜溜球昇華為結合戲劇與街頭文化的精湛國際表演藝術。</p>
+          <div class="performer-tags">
+            <span class="performer-tag">金氏世界紀錄</span>
+            <span class="performer-tag">世界冠軍</span>
+            <span class="performer-tag">戲劇街頭藝術</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. 遨兒音樂團隊 -->
+      <div class="performer-showcase-card">
+        <div class="performer-gallery">
+          <div class="gallery-main">
+            <img src="{{ '/assets/images/image51.webp' | relative_url }}" alt="遨兒音樂團隊打擊合奏" loading="lazy">
+          </div>
+          <div class="gallery-thumbs">
+            <div class="gallery-thumb">
+              <img src="{{ '/assets/images/image52.webp' | relative_url }}" alt="遨兒音樂全場律動同樂" loading="lazy">
+            </div>
+            <div class="gallery-thumb">
+              <img src="{{ '/assets/images/image53.webp' | relative_url }}" alt="遨兒音樂親子互動敲擊" loading="lazy">
+            </div>
+          </div>
+        </div>
+        <div class="performer-info">
+          <div class="performer-meta">
+            <span class="performer-badge">🥁 熱情打擊合奏</span>
+            <span class="performer-time">🕒 演出時段：11:30 / 11:55 / 14:40</span>
+          </div>
+          <h3 class="performer-name">遨兒音樂團隊</h3>
+          <p class="performer-subtitle">打出節奏玩出快樂・全場大律動</p>
+          <p class="performer-desc">「打出節奏玩出快樂、打出節奏跳出快樂！」充滿律動的打擊樂重奏，帶領全場觀眾隨節拍拍手搖擺，為萬聖節嘉年華注入最強勁的歡樂正能量！</p>
+          <div class="performer-tags">
+            <span class="performer-tag">打擊樂重奏</span>
+            <span class="performer-tag">全場節奏律動</span>
+            <span class="performer-tag">親子歡樂擊樂</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 雙場次幸運大摸彩品項 -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">雙場次幸運大摸彩</h2>
+      <p class="section-desc">憑摸彩園遊券之存根聯即可參加！兩場抽出均等豪禮，超人氣玩具與精美生活禮品！</p>
+    </div>
+
+    <div class="sponsor-grid">
+      {% for prize in site.data.timeline.raffle_prizes %}
+      <div class="sponsor-card-item">
+        <div class="sponsor-card-name">🎁 {{ prize.item }}</div>
+        <div class="sponsor-card-info" style="color: var(--halloween-gold);">{{ prize.quota }}</div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

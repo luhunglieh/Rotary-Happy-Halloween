@@ -1,0 +1,233 @@
+---
+layout: default
+title: 鬼怪走秀
+description: 2026年國際扶輪3522地區萬聖節嘉年華會・鬼怪走秀！創意小小裝扮、親子造型或團體變裝，登台展現獨特魅力，冠軍獨得 $5,000！
+---
+
+<!-- AEO Schema.org 結構化語意標記 -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "鬼怪走秀 ｜ 國際扶輪3522地區萬聖節嘉年華會",
+  "startDate": "2026-10-24T11:00:00+08:00",
+  "endDate": "2026-10-24T17:00:00+08:00",
+  "location": {
+    "@type": "Place",
+    "name": "台北市昌隆198公園",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "市民大道三段198號",
+      "addressLocality": "大安區",
+      "addressRegion": "台北市",
+      "addressCountry": "TW"
+    }
+  }
+}
+</script>
+
+<div class="page-hero">
+  <div class="container">
+    <h1 class="page-hero-title">🎭 鬼靈精怪伸展台投票秀</h1>
+    <p class="page-hero-desc">不論是充滿創意的小小裝扮、溫馨有趣的親子造型，或氣勢十足的團體變裝，都歡迎一起登上萬聖節伸展台，展現最獨特的創意與魅力！</p>
+  </div>
+</div>
+
+<!-- 獎金與獎品 -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">獎金與獎品</h2>
+      <p class="section-desc">穿上你最酷炫、最古靈精怪的萬聖節裝扮！登上星光伸展台展現創意與魅力，爭奪榮譽冠軍與豐厚獎金、實物好禮！</p>
+    </div>
+
+    <!-- 獎金階梯榜 -->
+    <div class="prize-grid">
+      {% for prize in site.data.timeline.contest_prizes %}
+      <div class="prize-card {% if prize.highlight %}champion{% endif %}">
+        <div class="prize-rank">{{ prize.rank }}</div>
+        <div class="prize-sum">{{ prize.amount }}</div>
+      </div>
+      {% endfor %}
+    </div>
+
+    <!-- 4種實物禮品 -->
+    <div style="margin-top: 28px;">
+      <div class="sponsor-grid">
+        {% for s in site.data.sponsors.material_sponsors %}
+        <div class="sponsor-card-item" style="display: flex; align-items: center; gap: 12px; padding: 16px 20px;">
+          <div style="font-size: 1.8rem; flex-shrink: 0;">🎁</div>
+          <div style="text-align: left;">
+            <div class="sponsor-card-name" style="margin-bottom: 3px;">{{ s.item }}</div>
+            <div style="font-size: 0.9rem; color: var(--text-muted);">{{ s.sponsor }} ｜ {{ s.club }}</div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 變裝風采 (roadshow00~06) -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">變裝風采</h2>
+      <p class="section-desc">超人氣搞怪造型、親子溫馨變裝與創意爆棚的萬聖風采！登上星光伸展台，展現最吸睛的魅力！</p>
+    </div>
+
+    <div class="roadshow-spooky-wrap">
+      <div class="roadshow-grid">
+        <div class="roadshow-card">
+          <div class="spooky-hang"><span class="spooky-thread"></span><span class="spooky-icon">🕷️</span></div>
+          <img src="{{ '/assets/images/roadshow00.webp' | relative_url }}" alt="變裝風采 00" class="roadshow-img" loading="lazy">
+        </div>
+        <div class="roadshow-card">
+          <div class="spooky-hang"><span class="spooky-thread"></span><span class="spooky-icon">🦇</span></div>
+          <img src="{{ '/assets/images/roadshow01.webp' | relative_url }}" alt="變裝風采 01" class="roadshow-img" loading="lazy">
+        </div>
+        <div class="roadshow-card">
+          <div class="spooky-hang"><span class="spooky-thread"></span><span class="spooky-icon">🎃</span></div>
+          <img src="{{ '/assets/images/roadshow02.webp' | relative_url }}" alt="變裝風采 02" class="roadshow-img" loading="lazy">
+        </div>
+        <div class="roadshow-card">
+          <div class="spooky-hang"><span class="spooky-thread"></span><span class="spooky-icon">👻</span></div>
+          <img src="{{ '/assets/images/roadshow03.webp' | relative_url }}" alt="變裝風采 03" class="roadshow-img" loading="lazy">
+        </div>
+        <div class="roadshow-card">
+          <div class="spooky-hang"><span class="spooky-thread"></span><span class="spooky-icon">🕷️</span></div>
+          <img src="{{ '/assets/images/roadshow05.webp' | relative_url }}" alt="變裝風采 05" class="roadshow-img" loading="lazy">
+        </div>
+        <div class="roadshow-card">
+          <div class="spooky-hang"><span class="spooky-thread"></span><span class="spooky-icon">🦇</span></div>
+          <img src="{{ '/assets/images/roadshow06.webp' | relative_url }}" alt="變裝風采 06" class="roadshow-img" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 報名專區 (移除投票字詞，整合 Google Form 連結與 QR Code) -->
+<section class="section" id="apply-section">
+  <div class="container">
+    <div style="background: var(--card-dark); border: 2px dashed var(--halloween-orange); border-radius: var(--radius-lg); padding: 35px 20px; text-align: center; max-width: 680px; margin: 0 auto;">
+      <h3 style="font-size: 1.45rem; color: var(--halloween-gold); margin-bottom: 10px;">📲 報名專區</h3>
+      <p style="color: var(--text-light); font-size: 1.05rem; margin-bottom: 20px; white-space: nowrap;">
+        歡迎線上填表或掃描下方 QR Code 參賽，登上萬聖伸展台秀出創意！
+      </p>
+      
+      <!-- QR Code 圖片與超連結 -->
+      <div style="margin-bottom: 22px;">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdEDqH1mTpZKdtPk4L2om2T8uwl7tMv5pjEMLOkfME5tSlotQ/viewform" target="_blank" rel="noopener noreferrer" title="點擊開啟 Google 報名表單" style="display: inline-block; background: #ffffff; padding: 14px; border-radius: var(--radius-md); box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35); transition: transform 0.2s ease;">
+          <img src="{{ '/assets/images/apply-QR-01.webp' | relative_url }}" alt="鬼怪走秀線上報名 Google 表單 QR Code" style="width: 180px; height: 180px; display: block; object-fit: contain;">
+        </a>
+      </div>
+
+      <!-- 線上報名按鈕 -->
+      <div>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdEDqH1mTpZKdtPk4L2om2T8uwl7tMv5pjEMLOkfME5tSlotQ/viewform" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 8px; font-size: 1.05rem; padding: 12px 28px;">
+          報名走秀票選活動 →
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 入口巨型拍照背板 ＆ 魔幻小扇 -->
+<section class="section section-alt" id="props-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">入口巨型拍照背板 ＆ 魔幻小扇</h2>
+    </div>
+
+    <!-- 魔幻小扇 超大特寫展示專區 -->
+    <div class="magic-fan-showcase">
+      <div class="magic-fan-img-box">
+        <img
+          src="{{ '/assets/images/magic-fan.webp' | relative_url }}"
+          alt="大會專屬應援與投票魔幻小扇紀念品"
+          class="magic-fan-img"
+          loading="lazy">
+      </div>
+      <div class="magic-fan-content">
+        <h3 class="magic-fan-title">魔幻小扇</h3>
+        <p class="magic-fan-desc">
+          大會專屬萬聖節限定應援禮，兼具伸展台走秀人氣投票與搞怪拍照道具，人手一把，萬聖氛圍滿分！
+        </p>
+      </div>
+    </div>
+
+    <!-- 巨型拍照背板 展示 (image40 & image41) -->
+    <div class="backdrop-section-title">
+      <h3>入口巨型拍照背板</h3>
+    </div>
+
+    <div class="backdrop-grid">
+      <div class="backdrop-card">
+        <img
+          src="{{ '/assets/images/image40.webp' | relative_url }}"
+          alt="入口巨型拍照背板"
+          class="backdrop-img"
+          loading="lazy">
+      </div>
+
+      <div class="backdrop-card">
+        <img
+          src="{{ '/assets/images/image41.webp' | relative_url }}"
+          alt="入口巨型拍照背板"
+          class="backdrop-img"
+          loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 賽制與評審常見說明（總監裁判講評） -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">賽制與評審常見說明</h2>
+    </div>
+
+    <!-- 總監裁判講評專區 -->
+    <div class="judge-commentary-wrap">
+      <!-- 總監圓形去背圖像 -->
+      <div class="judge-profile">
+        <div class="judge-avatar-box">
+          <img
+            src="{{ '/assets/images/DG-Auto-01-circle.webp' | relative_url }}"
+            alt="大會裁判長 國際扶輪3522地區總監"
+            class="judge-avatar-img"
+            loading="lazy">
+        </div>
+        <div class="judge-badge-title">大會評審講評</div>
+        <div class="judge-name">地區總監講評</div>
+        <div class="judge-role-desc">國際扶輪3522地區</div>
+      </div>
+
+      <!-- 講評與賽制說明卡 -->
+      <div class="judge-dialog-list">
+        <div class="judge-dialog-card">
+          <div class="judge-q-title">
+            <span>🎤</span>
+            <span>問：誰可以報名參加鬼怪走秀？</span>
+          </div>
+          <p class="judge-a-text">
+            答：不限年齡與資格，歡迎所有社友眷屬、親子家庭、社區小朋友報名參與！個人、雙人或團體變裝皆可報名。報名截止日：10 月 18 日
+          </p>
+        </div>
+
+        <div class="judge-dialog-card">
+          <div class="judge-q-title">
+            <span>🏆</span>
+            <span>問：大賽獎金如何發放？</span>
+          </div>
+          <p class="judge-a-text">
+            答：第一名獎金為新台幣 5,000 元、第二名 4,000 元、第三名 3,000 元、第四名 2,000 元、第五名 1,000 元。由現場熱烈票選揭曉優勝者，登上主舞台星光伸展台走秀，並由總監親自頒發榮譽獎金！
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+

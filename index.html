@@ -1,0 +1,243 @@
+---
+layout: default
+title: 首頁
+description: 2026年國際扶輪3522地區萬聖節嘉年華會・扶輪大手牽小手！10月24日相約台北市昌隆198公園，匯聚星級特技秀、鬼靈精怪伸展台、小鬼市集與公益愛心陪伴。
+---
+
+<!-- AEO Schema.org 結構化語意標記 -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "國際扶輪3522地區萬聖節嘉年華會・扶輪大手牽小手",
+  "startDate": "2026-10-24T11:00:00+08:00",
+  "endDate": "2026-10-24T17:00:00+08:00",
+  "location": {
+    "@type": "Place",
+    "name": "台北市昌隆198公園",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "市民大道三段198號",
+      "addressLocality": "大安區",
+      "addressRegion": "台北市",
+      "addressCountry": "TW"
+    }
+  }
+}
+</script>
+
+<!-- 滿版英雄主視覺橫幅 (Banner 使用 Banner01，支援桌機/手機 RWD 智慧切換) -->
+<section class="hero-banner-wrap">
+  <picture>
+    <source media="(max-width: 768px)" srcset="{{ '/assets/images/Banner01-mobile.webp' | relative_url }}" width="739" height="672">
+    <img
+      src="{{ '/assets/images/Banner01.webp' | relative_url }}"
+      alt="2026國際扶輪3522地區萬聖節嘉年華會・扶輪大手牽小手主視覺橫幅"
+      class="hero-banner-img"
+      width="1584"
+      height="672"
+      loading="eager"
+      fetchpriority="high">
+  </picture>
+
+  <!-- 萬聖節飛越蝙蝠氛圍特效 -->
+  {% include banner-bats.html %}
+</section>
+
+<!-- 首頁倒數計時器 (目標：2026年10月24日 星期六 11:00開始) -->
+<section class="countdown-section">
+  <div class="container">
+    <div class="countdown-box">
+      <div class="countdown-header">
+        <h2 class="countdown-title">慈善嘉年華倒數計時</h2>
+        <p style="color: var(--text-muted); font-size: 1rem; margin-top: 6px;">
+          活動日期：<span style="color: var(--halloween-gold); font-weight: 500;">2026 年 10 月 24 日（星期六）11:00 正式開始</span> ｜ 台北市昌隆 198 公園
+        </p>
+      </div>
+
+      <div class="countdown-digits-grid" id="countdown-timer">
+        <div class="countdown-card">
+          <div class="countdown-val" id="cd-days">00</div>
+          <div class="countdown-lbl">天</div>
+        </div>
+        <div class="countdown-card">
+          <div class="countdown-val" id="cd-hours">00</div>
+          <div class="countdown-lbl">時</div>
+        </div>
+        <div class="countdown-card">
+          <div class="countdown-val" id="cd-minutes">00</div>
+          <div class="countdown-lbl">分</div>
+        </div>
+        <div class="countdown-card">
+          <div class="countdown-val" id="cd-seconds">00</div>
+          <div class="countdown-lbl">秒</div>
+        </div>
+      </div>
+
+      <div class="countdown-actions">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdEDqH1mTpZKdtPk4L2om2T8uwl7tMv5pjEMLOkfME5tSlotQ/viewform" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+          🎭 報名走秀票選
+        </a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdWJINrhBLWgD7usvZtHp6l22wofL1W1Bu8dDvAOs23TziN2Q/viewform" target="_blank" rel="noopener noreferrer" class="btn btn-gold">
+          🍭 報名小鬼市集
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  (function() {
+    // 目標時間：2026年10月24日 11:00:00 (台北時間 UTC+8)
+    const targetDate = new Date("2026-10-24T11:00:00+08:00").getTime();
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const difference = targetDate - now;
+
+      if (difference <= 0) {
+        document.getElementById('cd-days').innerText = "00";
+        document.getElementById('cd-hours').innerText = "00";
+        document.getElementById('cd-minutes').innerText = "00";
+        document.getElementById('cd-seconds').innerText = "00";
+        return;
+      }
+
+      const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+      document.getElementById('cd-days').innerText = days < 10 ? '0' + days : days;
+      document.getElementById('cd-hours').innerText = hours < 10 ? '0' + hours : hours;
+      document.getElementById('cd-minutes').innerText = minutes < 10 ? '0' + minutes : minutes;
+      document.getElementById('cd-seconds').innerText = seconds < 10 ? '0' + seconds : seconds;
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+  })();
+</script>
+
+<!-- 活動宗旨與精神目標 (總監公訪標準規格) -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">活動宗旨與四大精神</h2>
+      <p class="section-desc">
+        扶輪大手牽小手。以萬聖節為載體，結合活動四大精神，並攜手在地團體，打造具公共參與、教育意義與實體效益的嘉年華活動，讓民眾在歡樂互動中實踐社會服務
+      </p>
+    </div>
+
+    <!-- 四大精神目標卡片 -->
+    <div class="activity-grid">
+      <div class="activity-card">
+        <div class="activity-card-body">
+          <div class="activity-card-icon">🤝</div>
+          <h3 class="activity-card-title">跨域協作・公私協力</h3>
+          <p class="activity-card-desc">攜手台北市政府社會局與在地里辦公處，整合公私部門資源，發揮最大社服關懷效益。</p>
+        </div>
+      </div>
+
+      <div class="activity-card">
+        <div class="activity-card-body">
+          <div class="activity-card-icon">🧡</div>
+          <h3 class="activity-card-title">實質協助・親手服務</h3>
+          <p class="activity-card-desc">全額贊助近百位受邀兒童專屬變裝服飾與精采園遊活動，扶輪社友牽手溫暖同行與同樂。</p>
+        </div>
+      </div>
+
+      <div class="activity-card">
+        <div class="activity-card-body">
+          <div class="activity-card-icon">🌟</div>
+          <h3 class="activity-card-title">品格教育・價值傳承</h3>
+          <p class="activity-card-desc">傳遞互助、分享與感恩核心價值，結合小鬼老闆擺攤與親子闖關體驗，寓教於樂。</p>
+        </div>
+      </div>
+
+      <div class="activity-card">
+        <div class="activity-card-body">
+          <div class="activity-card-icon">🏛️</div>
+          <h3 class="activity-card-title">形象提升・CSR實踐</h3>
+          <p class="activity-card-desc">展現國際扶輪3522地區深耕地方之公共形象，攜手在地組織共創社會責任新里程碑。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 三大核心活動亮點 -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">三大核心活動亮點</h2>
+      <p class="section-desc">扶輪精神 × 萬聖趣味 × 社區共創</p>
+    </div>
+
+    <div class="activity-grid">
+      <!-- 左 1st: 鬼靈精怪伸展台投票秀 -->
+      <div class="activity-card">
+        <div class="activity-card-body">
+          <div class="activity-card-icon">🎭</div>
+          <h3 class="activity-card-title">鬼靈精怪伸展台投票秀</h3>
+          <p class="activity-card-desc">不論是充滿創意的小小裝扮、溫馨有趣的親子造型，或氣勢十足的團體變裝，都歡迎一起登上萬聖節伸展台，展現最獨特的創意與魅力！</p>
+          <a href="{{ '/pages/costume-contest.html' | relative_url }}" class="activity-card-btn">查看伸展台賽制與投票 →</a>
+        </div>
+      </div>
+
+      <!-- 左 2nd: 舞台表演與魔幻綜藝 (原左1) -->
+      <div class="activity-card">
+        <div class="activity-card-body">
+          <div class="activity-card-icon">🎪</div>
+          <h3 class="activity-card-title">舞台表演與魔幻綜藝</h3>
+          <p class="activity-card-desc">專業街頭藝人表演小冰綜藝特技秀、魔幻特務馬拉將、扯鈴彩虹龍，還有金氏世界紀錄保持人展現溜溜球神技，節目將精彩非凡！</p>
+          <a href="{{ '/pages/stage-shows.html' | relative_url }}" class="activity-card-btn">查看精彩節目時刻表 →</a>
+        </div>
+      </div>
+
+      <!-- 左 3rd: 小鬼市集與闖關遊戲 -->
+      <div class="activity-card">
+        <div class="activity-card-body">
+          <div class="activity-card-icon">🍭</div>
+          <h3 class="activity-card-title">小鬼市集與闖關遊戲</h3>
+          <p class="activity-card-desc">小小老闆生活擺攤體驗、無毒兒童萬聖彩繪，反詐、愛地球、找小石 3大闖關集章還有歡樂扭蛋，以及應景小物親手作！</p>
+          <a href="{{ '/pages/market-games.html' | relative_url }}" class="activity-card-btn">探索市集與闖關攻略 →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 贊助商專區：使用大圖 Sponsor-00 與 Sponsor-01，底色與圖片完全契合 -->
+<section class="section" id="sponsors-showcase">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">主辦單位與榮譽贊助夥伴</h2>
+      <p class="section-desc">感謝各界善心企業與扶輪社友以熱血愛心共同成就「扶輪大手牽小手」！</p>
+    </div>
+
+    <div class="sponsor-block-wrap">
+      <!-- Sponsor-00 大圖區塊 (底色完美貼合 #634566 漸層) -->
+      <div class="sponsor-box-00">
+        <img
+          src="{{ '/assets/images/Sponsor-00.webp' | relative_url }}"
+          alt="國際扶輪3522地區主辦單位與榮譽贊助旺台基金會、台北市護照扶輪社展示牆"
+          loading="lazy">
+      </div>
+
+      <!-- Sponsor-01 大圖區塊 (純白底色完美貼合) -->
+      <div class="sponsor-box-01">
+        <img
+          src="{{ '/assets/images/Sponsor-01.webp' | relative_url }}"
+          alt="萬聖節嘉年華合辦單位T3ex、汐游寶寶與鬼王級贊助商大信建設、夢工場、HOOTERS、滋立、可夫萊等標誌牆"
+          loading="lazy">
+      </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 35px;">
+      <a href="{{ '/pages/sponsors.html' | relative_url }}" class="btn btn-gold">
+        完整贊助夥伴資訊 →
+      </a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,31 @@
+# 2026 國際扶輪3522地區 萬聖節嘉年華會・扶輪大手牽小手
+
+> 2026年台北最大規模公益親子萬聖節嘉年華！結合公益服務、星級特技舞台秀、鬼靈精怪走秀大賽、小老闆二手市集與昌隆198公園大地闖關遊戲。
+
+## 活動核心資訊 (Core Event Information)
+- **活動名稱**：2026年國際扶輪3522地區萬聖節嘉年華會（扶輪大手牽小手）
+- **活動時間**：2026年10月24日（星期六）11:00 ～ 17:00
+- **活動地點**：台北市昌隆198公園（台北市大安區市民大道三段198號）
+- **入場費用**：完全免費，自由入場參加
+- **主辦單位**：國際扶輪 3522 地區、台北天際扶輪社、台北環球扶輪社、台北忠孝扶輪社、台北同領扶輪社
+- **合辦指導**：台北市政府社會局、大安區昌隆里辦公處、T3ex TEC、汐游寶寶
+- **榮譽贊助**：財團法人旺台環境文化基金會、台北市護照扶輪社
+
+## 活動四大特色亮點 (Key Highlights)
+1. **鬼靈精怪走秀票選活動**：星光伸展台創意變裝競賽，總獎金豐厚，第一名冠軍獨得 NT$5,000 獎金與精美實物好禮。
+2. **星級特技舞台秀**：金氏世界紀錄溜溜球楊元慶、小冰綜藝特技秀、馬拉將魔術特務、彩虹龍炫彩扯鈴、歌手林凡精彩演唱。
+3. **小鬼市集小小店長**：小朋友親自整理二手玩具與繪本擺攤叫賣，體驗獨立自主與永續分享教育。
+4. **昌隆198公園大地集章冒險**：反詐小先鋒、愛地球資源回收、找小石社區尋寶 3 大關卡，通關免費轉巨型萬聖扭蛋機。
+
+## 交通與交通指引 (Location & Transportation)
+- **捷運**：板南線/文湖線「忠孝復興站」1號出口沿安東街步行約 7 分鐘；板南線/中和新蘆線「忠孝新生站」4號出口步行約 10 分鐘。
+- **公車**：忠泰美術館站（下車即達，可搭乘 669、919）；正義郵局站（步行約 7 分鐘）。
+- **停車場**：Times 市民大道三段停車場（活動大樓地下 B3）、市民大道地下停車場（建國-復興段）。
+
+## 官方網站與主要頁面 (Official Sitemap)
+- 首頁: https://luhunglieh.github.io/Rotary-Happy-Halloween/
+- 鬼靈精怪走秀票選: https://luhunglieh.github.io/Rotary-Happy-Halloween/pages/costume-contest.html
+- 舞台表演魔幻綜藝: https://luhunglieh.github.io/Rotary-Happy-Halloween/pages/stage-shows.html
+- 小鬼市集闖關遊戲: https://luhunglieh.github.io/Rotary-Happy-Halloween/pages/market-games.html
+- 贊助夥伴名單: https://luhunglieh.github.io/Rotary-Happy-Halloween/pages/sponsors.html
+- 記者會快報: https://luhunglieh.github.io/Rotary-Happy-Halloween/pages/press-conference.html

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://luhunglieh.github.io/Rotary-Happy-Halloween/sitemap.xml

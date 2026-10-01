@@ -1,0 +1,74 @@
+# ==========================================
+# 國際扶輪3522地區 萬聖節嘉年華會 Jekyll 設定檔
+# 扶輪大手牽小手，龍來搞怪樂翻天！
+# ==========================================
+
+# --- 基本資訊 ---
+title: 扶輪大手牽小手
+tagline: 扶輪大手牽小手
+description: 2026年國際扶輪3522地區萬聖節嘉年華會（扶輪大手牽小手），結合公益服務、家扶兒童陪伴、特技舞台秀、鬼靈精怪伸展台、小鬼市集與闖關活動。
+author: 國際扶輪3522地區
+lang: zh-TW
+timezone: Asia/Taipei
+
+# --- 網址設定 ---
+url: "https://luhunglieh.github.io"
+baseurl: "/Rotary-Happy-Halloween"
+
+# --- SEO / 社群分享 ---
+logo: /assets/images/logo.webp
+footer_logo: /assets/images/footer-logo-2.webp
+og_image: /assets/images/Banner01.webp
+
+# --- 活動詳細資訊 ---
+organizer: "國際扶輪3522地區"
+term: "2026年度服務計畫"
+location:
+  name: "昌隆198公園"
+  address: "台北市大安區市民大道三段198號"
+dates: "2026年10月24日（六）11:00～17:00"
+event_start: "2026-10-24T11:00:00+08:00"
+event_end: "2026-10-24T17:00:00+08:00"
+target_audience: "預計 750~999 人熱情參與"
+
+# --- 導覽選單 ---
+navigation:
+  - title: "首頁"
+    url: "/"
+  - title: "鬼靈精怪走秀票選"
+    url: "/pages/costume-contest.html"
+  - title: "舞台表演魔幻綜藝"
+    url: "/pages/stage-shows.html"
+  - title: "小鬼市集闖關遊戲"
+    url: "/pages/market-games.html"
+  - title: "贊助夥伴"
+    url: "/pages/sponsors.html"
+  - title: "記者會快報"
+    url: "/pages/press-conference.html"
+    highlight: true
+
+# --- 主題與配置 ---
+theme: jekyll-theme-slate
+show_excerpts: false
+feed:
+  disable: true
+
+sass:
+  style: :compressed
+
+# --- 排除不需要編譯的檔案 ---
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - Document-slides/
+  - .github/
+  - MAINTENANCE_REPORT.md
+  - SEO_REPORT.md
+  - PROJECT_MASTER_DOCUMENT.md
+  - _archive/
+  - "*.bat"
+
+# --- 外掛 ---
+plugins:
+  - jekyll-sitemap

@@ -1,0 +1,63 @@
+{
+  "king_sponsors": [
+    { "company": "DAISIN 大信建設營造", "sponsor": "DGN King", "club": "天際扶輪社" },
+    { "company": "DREAMER 夢工場室內裝修設計", "sponsor": "CP Dreamer", "club": "環球扶輪社" },
+    { "company": "HOOTERS 美式餐廳", "sponsor": "Allen Liu", "club": "環球扶輪社" },
+    { "company": "滋立", "sponsor": "VDS Chanel", "club": "白金扶輪社" },
+    { "company": "可夫萊精品堅果 (可夫萊食品)", "sponsor": "IPP Andy", "club": "松仁扶輪社" },
+    { "company": "銘記越南文化美食餐廳", "sponsor": "Smiley 吳坤玲", "club": "環球扶輪社" },
+    { "company": "順弘國際貿易", "sponsor": "PAG Frank", "club": "同領扶輪社" },
+    { "company": "探吉事業", "sponsor": "Johnson", "club": "環球扶輪社" },
+    { "company": "天空の月", "sponsor": "企業代表", "club": "企業共好" },
+    { "company": "CAFÉ DE PARIS", "sponsor": "品牌代表", "club": "企業共好" },
+    { "company": "荖子鍋", "sponsor": "品牌代表", "club": "企業共好" }
+  ],
+  "monster_sponsors": [
+    { "company": "台灣新南向留遊學代辦", "sponsor": "非扶輪人熱心贊助", "club": "企業共好" }
+  ],
+  "devil_sponsors": [
+    { "company": "時間男人女人", "sponsor": "Banana", "club": "環球扶輪社" },
+    { "company": "Tesatby 慕耕活", "sponsor": "Vanessa", "club": "環球扶輪社" },
+    { "company": "久繹國際 (椰兄泰式料理)", "sponsor": "Amos", "club": "環球扶輪社" },
+    { "company": "陶文國際趨勢顧問", "sponsor": "Tower", "club": "環球扶輪社" },
+    { "company": "瑞康屋", "sponsor": "Vivia", "club": "環球扶輪社" },
+    { "company": "逆風文化", "sponsor": "John 蔡明輝", "club": "環球扶輪社" },
+    { "company": "橘子樹眼鏡公司", "sponsor": "Jason", "club": "環球扶輪社" },
+    { "company": "沃爾林克立體磁磚", "sponsor": "Po", "club": "環球扶輪社" },
+    { "company": "京京國際", "sponsor": "小葉", "club": "環球扶輪社" },
+    { "company": "合揚餐飲設備規劃", "sponsor": "Sasa", "club": "環球扶輪社" },
+    { "company": "義品餐飲事業", "sponsor": "Win", "club": "環球扶輪社" },
+    { "company": "貝絲珠寶", "sponsor": "陳昕陽", "club": "元宇宙扶輪社" },
+    { "company": "翱翔菁英顧問 (FTTW)", "sponsor": "企業代表", "club": "熱心贊助" },
+    { "company": "佳金實業", "sponsor": "PP Eugene", "club": "忠美扶輪社" },
+    { "company": "原長企業", "sponsor": "PP KC", "club": "忠孝扶輪社" },
+    { "company": "台北市東區扶輪社", "sponsor": "DGE Nicky / PAG Philip", "club": "東區扶輪社" },
+    { "company": "個人贊助", "sponsor": "PP Mei", "club": "大屯山扶輪社" },
+    { "company": "個人贊助", "sponsor": "Joanna 蕭宇喬", "club": "東湖扶輪社" },
+    { "company": "個人贊助", "sponsor": "AG Kelly", "club": "新中區扶輪社" },
+    { "company": "個人贊助", "sponsor": "PP Base", "club": "北投扶輪社" },
+    { "company": "個人贊助", "sponsor": "PP Robot", "club": "東北扶輪社" }
+  ],
+  "booth_partners": [
+    { "company": "拍拍趣 (現場即印拍貼機)", "sponsor": "Stark", "club": "環球扶輪社" },
+    { "company": "茶樂 (特選現萃冷泡茶)", "sponsor": "P Mei", "club": "環球扶輪社" },
+    { "company": "花蓮銀耳露", "sponsor": "友善小農", "club": "花蓮特產" },
+    { "company": "田家花蓮米香傳奇", "sponsor": "傳統古法", "club": "花蓮特產" },
+    { "company": "二和珍糕點", "sponsor": "Sam", "club": "環球扶輪社" },
+    { "company": "千千虎掌燒", "sponsor": "人氣甜點", "club": "美食攤位" },
+    { "company": "東區鹽酥雞", "sponsor": "台式炸物", "club": "美食攤位" },
+    { "company": "台北市脊髓損傷者協會", "sponsor": "愛心義賣", "club": "忠善扶輪社" },
+    { "company": "Sean 特調飲品", "sponsor": "Sean", "club": "環球扶輪社" },
+    { "company": "焦糖偑烘焙", "sponsor": "IPP Frank", "club": "東湖扶輪社" },
+    { "company": "窗簾遮陽用品", "sponsor": "JS", "club": "環球扶輪社" },
+    { "company": "憶霖企業", "sponsor": "Amy", "club": "北投扶輪社" },
+    { "company": "建權精品企業社", "sponsor": "Paul", "club": "環球扶輪社" },
+    { "company": "璽愛扶青計畫", "sponsor": "CP Ivy", "club": "璽愛扶輪社" }
+  ],
+  "material_sponsors": [
+    { "item": "兒童專用立體口罩 300 個", "sponsor": "趙國鈞", "club": "東湖扶輪社" },
+    { "item": "彩窗軌道磁力片 5 組", "sponsor": "Fion", "club": "天際扶輪社" },
+    { "item": "呈易美學牙醫潔牙 100 組", "sponsor": "Jiuan", "club": "天際扶輪社" },
+    { "item": "超速遙控賽車 3 台", "sponsor": "Diesel", "club": "天際扶輪社" }
+  ]
+}
