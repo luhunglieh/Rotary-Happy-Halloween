@@ -1848,10 +1848,36 @@ a:hover {
   color: #ffffff;
 }
 
+.footer-heading-main,
+.footer-heading-sub {
+  display: inline;
+}
+
 .footer-subheading {
   color: rgba(255, 255, 255, 0.88);
   font-size: 0.98rem;
   font-weight: 400;
+}
+
+.footer-subheading-addr,
+.footer-subheading-time {
+  display: inline;
+}
+
+@media (max-width: 680px) {
+  .footer-heading-sub {
+    display: block;
+    margin-top: 4px;
+  }
+
+  .footer-subheading-sep {
+    display: none;
+  }
+
+  .footer-subheading-time {
+    display: block;
+    margin-top: 4px;
+  }
 }
 
 /* =========================================
@@ -1922,16 +1948,16 @@ a:hover {
 .btn-open-gmap {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   background: linear-gradient(135deg, #d88e44 0%, #b86b24 100%);
   border: 1px solid rgba(255, 255, 255, 0.35);
   border-radius: var(--radius-md);
-  padding: 16px 26px;
+  padding: 13px 22px;
   color: #ffffff;
   text-decoration: none;
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.18);
   transition: all 0.25s ease;
-  gap: 16px;
+  text-align: center;
 }
 
 .btn-open-gmap:hover {
@@ -1941,44 +1967,13 @@ a:hover {
   background: linear-gradient(135deg, #e2974b 0%, #c5762c 100%);
 }
 
-.gmap-btn-icon {
-  font-size: 2.2rem;
-  line-height: 1;
-  flex-shrink: 0;
-}
-
-.gmap-btn-content {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  flex: 1;
-}
-
-.gmap-btn-title {
-  font-size: 1.2rem;
-  font-weight: 600; /* 溫和不粗重 */
-  letter-spacing: 0.5px;
-  color: #ffffff;
-}
-
 .gmap-btn-desc {
-  font-size: 0.92rem;
-  color: rgba(255, 255, 255, 0.92);
-  font-weight: 400;
-  margin-top: 3px;
-}
-
-.gmap-btn-arrow {
-  font-size: 1.4rem;
-  font-weight: 600;
-  color: #ffe082;
-  transition: transform 0.25s ease;
-  flex-shrink: 0;
-}
-
-.btn-open-gmap:hover .gmap-btn-arrow {
-  transform: translateX(6px);
+  font-size: 1.05rem;
   color: #ffffff;
+  font-weight: 500;
+  margin: 0;
+  letter-spacing: 0.3px;
+  text-align: center;
 }
 
 /* 地圖與大眾運輸/停車兩欄排版 */
@@ -2057,7 +2052,7 @@ a:hover {
 }
 
 .footer-org-name {
-  font-size: 1.05rem;
+  font-size: 0.92rem;
   font-weight: 500; /* 溫和不粗重 */
   color: var(--halloween-gold);
   letter-spacing: 0.5px;
@@ -2065,26 +2060,26 @@ a:hover {
 }
 
 .footer-event-name {
-  font-size: 1.45rem;
+  font-size: 1.18rem;
   font-weight: 400; /* 不用粗體 */
   color: #ffffff;
-  margin: 3px 0 0;
+  margin: 2px 0 0;
   line-height: 1.25;
   display: block;
 }
 
 .footer-brand-logo {
-  height: 52px;
-  max-width: 230px;
+  height: 38px;
+  max-width: 170px;
   width: auto;
   object-fit: contain;
   display: block;
 }
 
 .footer-tagline-text {
-  font-size: 0.95rem;
+  font-size: 0.84rem;
   color: #ffe082;
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: 0.3px;
   line-height: 1.6;
   margin: 0;
@@ -2134,6 +2129,40 @@ a:hover {
   border-top: 1px solid rgba(255, 255, 255, 0.15);
   font-size: 0.88rem;
   color: rgba(255, 255, 255, 0.75);
+}
+
+.footer-bottom-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 6px 12px;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.footer-bottom-org {
+  display: inline-block;
+}
+
+.footer-bottom-sep {
+  color: rgba(255, 255, 255, 0.45);
+  user-select: none;
+}
+
+.footer-bottom-slogan {
+  display: inline-block;
+}
+
+@media (max-width: 680px) {
+  .footer-bottom-content {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .footer-bottom-sep {
+    display: none;
+  }
 }
 
 /* 回頂端浮動按鈕 */
@@ -2625,3 +2654,561 @@ a:hover {
   }
 }
 
+/* ==========================================================================
+   萬聖節主題頁面專屬沉浸式視覺氛圍特效 (微創、輕量、純向量 SVG、零破圖)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. 鬼靈精怪頁專屬：全頁萬聖節蜘蛛網氛圍特效 (decor-spiderweb.html)
+   -------------------------------------------------------------------------- */
+.page-spiderweb-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.spiderweb-corner {
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  opacity: 0.82;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.45));
+}
+
+.spiderweb-top-left {
+  top: 0;
+  left: 0;
+}
+
+.spiderweb-top-right {
+  top: 0;
+  right: 0;
+}
+
+.spiderweb-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.spiderweb-side {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  opacity: 0.55;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.35));
+}
+
+.spiderweb-side-left {
+  top: 45%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.spiderweb-side-right {
+  top: 60%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.spiderweb-svg-sm {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.spider-dangle {
+  position: absolute;
+  top: 75px;
+  left: 95px;
+  transform-origin: top center;
+  animation: spiderSway 4s ease-in-out infinite alternate;
+}
+
+.spider-dangle-right {
+  left: auto;
+  right: 95px;
+  animation: spiderSwayRight 4.5s ease-in-out infinite alternate 1.5s;
+}
+
+.spider-thread {
+  width: 1px;
+  height: 35px;
+  background: rgba(255, 255, 255, 0.45);
+  margin: 0 auto;
+  animation: spiderThreadDrop 13s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+}
+
+.spider-thread-right {
+  animation: spiderThreadDropRight 15s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite 4s;
+}
+
+.mini-spider {
+  width: 22px;
+  height: 22px;
+  display: block;
+  margin: 0 auto;
+  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7));
+}
+
+@keyframes spiderSway {
+  0% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(10deg);
+  }
+}
+
+@keyframes spiderSwayRight {
+  0% {
+    transform: rotate(8deg);
+  }
+  100% {
+    transform: rotate(-8deg);
+  }
+}
+
+/* 蜘蛛垂降、半空懸晃與爬升動畫 (絲線長度動態拉長與收回) */
+@keyframes spiderThreadDrop {
+  0%, 100% {
+    height: 30px;
+  }
+  10% {
+    height: 30px;
+  }
+  28% {
+    height: 230px;
+  }
+  62% {
+    height: 230px;
+  }
+  82% {
+    height: 30px;
+  }
+}
+
+@keyframes spiderThreadDropRight {
+  0%, 100% {
+    height: 25px;
+  }
+  12% {
+    height: 25px;
+  }
+  30% {
+    height: 185px;
+  }
+  65% {
+    height: 185px;
+  }
+  84% {
+    height: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .spiderweb-corner {
+    width: 130px;
+    height: 130px;
+  }
+  .spiderweb-side {
+    display: none;
+  }
+  .spider-dangle {
+    top: 42px;
+    left: 56px;
+  }
+  .spider-dangle-right {
+    top: 42px;
+    right: 56px;
+    left: auto;
+  }
+  .spider-thread {
+    animation-name: spiderThreadDropMobile;
+  }
+  .spider-thread-right {
+    animation-name: spiderThreadDropRightMobile;
+  }
+  .mini-spider {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+@keyframes spiderThreadDropMobile {
+  0%, 100% {
+    height: 20px;
+  }
+  10% {
+    height: 20px;
+  }
+  28% {
+    height: 110px;
+  }
+  62% {
+    height: 110px;
+  }
+  82% {
+    height: 20px;
+  }
+}
+
+@keyframes spiderThreadDropRightMobile {
+  0%, 100% {
+    height: 18px;
+  }
+  12% {
+    height: 18px;
+  }
+  30% {
+    height: 95px;
+  }
+  65% {
+    height: 95px;
+  }
+  84% {
+    height: 18px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   2. 舞臺表演頁專屬：全頁蝙蝠隨意飛動態特效 (page-bats.html)
+   -------------------------------------------------------------------------- */
+.page-bats-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.page-bat-track {
+  position: absolute;
+  will-change: transform, left, top;
+}
+
+.bat-svg {
+  overflow: visible;
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.6));
+  display: block;
+}
+
+.bat-sm {
+  width: 32px;
+  height: 16px;
+}
+
+.bat-md {
+  width: 48px;
+  height: 24px;
+}
+
+.bat-lg {
+  width: 68px;
+  height: 34px;
+}
+
+.bat-reverse {
+  transform: scaleX(-1);
+}
+
+.bat-wing-l {
+  fill: #1d0f28;
+  transform-origin: 46px 20px;
+  animation: batWingFlapL 0.28s ease-in-out infinite alternate;
+}
+
+.bat-wing-r {
+  fill: #1d0f28;
+  transform-origin: 54px 20px;
+  animation: batWingFlapR 0.28s ease-in-out infinite alternate;
+}
+
+.bat-body polygon,
+.bat-body circle,
+.bat-body ellipse {
+  fill: #2a1538;
+}
+
+@keyframes batWingFlapL {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(-35deg); }
+}
+
+@keyframes batWingFlapR {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(35deg); }
+}
+
+.bat-pitch-1 { animation: batPitch 2.6s ease-in-out infinite alternate; }
+.bat-pitch-2 { animation: batPitch 1.8s ease-in-out infinite alternate-reverse; }
+.bat-pitch-3 { animation: batPitch 1.3s ease-in-out infinite alternate; }
+.bat-pitch-4 { animation: batPitch 2.2s ease-in-out infinite alternate-reverse; }
+
+@keyframes batPitch {
+  0% { transform: translateY(-7px) rotate(-4deg); }
+  100% { transform: translateY(7px) rotate(4deg); }
+}
+
+/* 蝙蝠隨機飛行軌道 (由左至右、由右至左、高空、中空、穿梭) */
+.page-bat-1 {
+  top: 14%;
+  animation: batFlight1 18s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.page-bat-2 {
+  top: 36%;
+  animation: batFlight2 21s cubic-bezier(0.4, 0, 0.2, 1) infinite 3.5s;
+}
+
+.page-bat-3 {
+  top: 62%;
+  animation: batFlight3 14s cubic-bezier(0.4, 0, 0.2, 1) infinite 7s;
+}
+
+.page-bat-4 {
+  top: 24%;
+  animation: batFlight4 23s cubic-bezier(0.4, 0, 0.2, 1) infinite 1.5s;
+}
+
+.page-bat-5 {
+  top: 76%;
+  animation: batFlight5 19s cubic-bezier(0.4, 0, 0.2, 1) infinite 10s;
+}
+
+@keyframes batFlight1 {
+  0% { left: -90px; transform: translateY(0) scale(0.9); opacity: 0; }
+  6% { opacity: 0.88; }
+  35% { transform: translateY(32px) scale(1); }
+  65% { transform: translateY(-24px) scale(1.05); }
+  94% { opacity: 0.88; }
+  100% { left: calc(100vw + 90px); transform: translateY(12px) scale(0.9); opacity: 0; }
+}
+
+@keyframes batFlight2 {
+  0% { right: -110px; left: auto; transform: translateY(0) scaleX(-1); opacity: 0; }
+  6% { opacity: 0.85; }
+  42% { transform: translateY(46px) scaleX(-1) scale(1.1); }
+  72% { transform: translateY(-28px) scaleX(-1) scale(0.95); }
+  94% { opacity: 0.85; }
+  100% { right: calc(100vw + 110px); left: auto; transform: translateY(10px) scaleX(-1); opacity: 0; }
+}
+
+@keyframes batFlight3 {
+  0% { left: -70px; transform: translateY(0); opacity: 0; }
+  6% { opacity: 0.75; }
+  50% { transform: translateY(-36px); }
+  94% { opacity: 0.75; }
+  100% { left: calc(100vw + 70px); transform: translateY(-60px); opacity: 0; }
+}
+
+@keyframes batFlight4 {
+  0% { right: -85px; left: auto; transform: translateY(0); opacity: 0; }
+  6% { opacity: 0.8; }
+  45% { transform: translateY(-30px); }
+  78% { transform: translateY(28px); }
+  94% { opacity: 0.8; }
+  100% { right: calc(100vw + 85px); left: auto; transform: translateY(-8px); opacity: 0; }
+}
+
+@keyframes batFlight5 {
+  0% { left: -110px; top: 12%; transform: translateY(0); opacity: 0; }
+  6% { opacity: 0.88; }
+  40% { top: 38%; transform: translateY(22px); }
+  78% { top: 66%; transform: translateY(-16px); }
+  94% { opacity: 0.88; }
+  100% { left: calc(100vw + 110px); top: 82%; transform: translateY(0); opacity: 0; }
+}
+
+@media (max-width: 768px) {
+  .page-bat-2,
+  .page-bat-4 {
+    display: none;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   3. 小鬼市集頁專屬：全頁小南瓜亂彈跳動態特效 (decor-pumpkins.html)
+   -------------------------------------------------------------------------- */
+.page-pumpkins-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.pumpkin-hop-item {
+  position: absolute;
+  will-change: transform;
+}
+
+.bouncing-pumpkin {
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.5));
+  display: block;
+}
+
+.pumpkin-sm {
+  width: 38px;
+  height: 32px;
+}
+
+.pumpkin-md {
+  width: 52px;
+  height: 44px;
+}
+
+.pumpkin-shadow {
+  width: 82%;
+  height: 6px;
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.42) 0%, transparent 70%);
+  margin: 3px auto 0;
+  border-radius: 50%;
+  animation: pumpkinShadowPulse 1.8s ease-in-out infinite;
+}
+
+@keyframes pumpkinShadowPulse {
+  0%, 100% { transform: scale(1.1); opacity: 0.7; }
+  45%, 50% { transform: scale(0.45); opacity: 0.2; }
+}
+
+/* 左下歡樂狂彈跳南瓜 */
+.pumpkin-hop-1 {
+  bottom: 24px;
+  left: 32px;
+  animation: pumpkinBounceCrazy1 1.9s ease-in-out infinite;
+}
+
+@keyframes pumpkinBounceCrazy1 {
+  0%, 100% {
+    transform: translateY(0) scale(1.08, 0.85);
+  }
+  15% {
+    transform: translateY(-8px) scale(0.92, 1.1) rotate(-5deg);
+  }
+  45% {
+    transform: translateY(-68px) scale(1.04, 0.96) rotate(10deg);
+  }
+  75% {
+    transform: translateY(-10px) scale(0.95, 1.05) rotate(-3deg);
+  }
+  85% {
+    transform: translateY(0) scale(1.16, 0.78);
+  }
+}
+
+/* 右下俏皮旋轉彈跳南瓜 */
+.pumpkin-hop-3 {
+  bottom: 26px;
+  right: 36px;
+  animation: pumpkinBounceCrazy3 2.3s ease-in-out infinite 0.4s;
+}
+
+@keyframes pumpkinBounceCrazy3 {
+  0%, 100% {
+    transform: translateY(0) scale(1.08, 0.85);
+  }
+  20% {
+    transform: translateY(-10px) scale(0.92, 1.08) rotate(7deg);
+  }
+  50% {
+    transform: translateY(-80px) scale(1.05, 0.95) rotate(-12deg);
+  }
+  80% {
+    transform: translateY(-8px) scale(0.96, 1.04) rotate(4deg);
+  }
+  90% {
+    transform: translateY(0) scale(1.18, 0.75);
+  }
+}
+
+/* 橫向左往右蹦跳小南瓜 */
+.pumpkin-track-2 {
+  position: absolute;
+  bottom: 16px;
+  left: 0;
+  width: 100vw;
+  animation: pumpkinCrossLeftToRight 25s linear infinite;
+}
+
+.pumpkin-hop-2 {
+  animation: pumpkinHopCycle 0.7s ease-in-out infinite alternate;
+}
+
+@keyframes pumpkinHopCycle {
+  0% {
+    transform: translateY(0) scale(1.1, 0.8) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-52px) scale(0.92, 1.1) rotate(14deg);
+  }
+  100% {
+    transform: translateY(0) scale(1.14, 0.76) rotate(26deg);
+  }
+}
+
+@keyframes pumpkinCrossLeftToRight {
+  0% { transform: translateX(-80px); opacity: 0; }
+  3% { opacity: 0.85; }
+  97% { opacity: 0.85; }
+  100% { transform: translateX(calc(100vw + 80px)); opacity: 0; }
+}
+
+/* 右往左突擊大彈跳小南瓜 */
+.pumpkin-track-4 {
+  position: absolute;
+  bottom: 78px;
+  right: 0;
+  width: 100vw;
+  animation: pumpkinCrossRightToLeft 28s linear infinite 11s;
+}
+
+.pumpkin-hop-4 {
+  animation: pumpkinHopCycleReverse 0.65s ease-in-out infinite alternate;
+}
+
+@keyframes pumpkinHopCycleReverse {
+  0% {
+    transform: translateY(0) scale(1.1, 0.8) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-58px) scale(0.9, 1.12) rotate(-14deg);
+  }
+  100% {
+    transform: translateY(0) scale(1.14, 0.76) rotate(-26deg);
+  }
+}
+
+@keyframes pumpkinCrossRightToLeft {
+  0% { transform: translateX(calc(100vw + 80px)); opacity: 0; }
+  3% { opacity: 0.85; }
+  97% { opacity: 0.85; }
+  100% { transform: translateX(-80px); opacity: 0; }
+}
+
+@media (max-width: 768px) {
+  .pumpkin-hop-1 {
+    bottom: 14px;
+    left: 10px;
+    transform: scale(0.72);
+  }
+  .pumpkin-hop-3 {
+    bottom: 14px;
+    right: 10px;
+    transform: scale(0.72);
+  }
+  .pumpkin-track-4 {
+    display: none;
+  }
+}
