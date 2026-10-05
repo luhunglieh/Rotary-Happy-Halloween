@@ -1,16 +1,22 @@
 ---
 layout: default
 title: 記者會快報
-description: 2026年國際扶輪3522地區萬聖節嘉年華會・記者會快報最新資訊
+description: 2026年國際扶輪3522地區萬聖節嘉年華會・盛大記者會現場花絮、愛心捐贈儀式與24家主流媒體新聞聯播！
 ---
 
-<!-- AEO 結構化標記 -->
+<!-- AEO Schema.org 結構化語意標記 -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "NewsArticle",
   "headline": "2026年國際扶輪3522地區萬聖節嘉年華會・記者會快報",
-  "description": "國際扶輪3522地區萬聖節嘉年華會（扶輪大手牽小手）最新新聞與焦點活動發布專區。",
+  "description": "國際扶輪3522地區萬聖節嘉年華會盛大記者會現場花絮、愛心捐贈儀式與24家主流媒體新聞聯播！",
+  "datePublished": "2026-10-02T12:00:00+08:00",
+  "dateModified": "2026-10-05T10:30:00+08:00",
+  "image": [
+    "{{ '/assets/images/reports/000-2.webp' | absolute_url }}",
+    "{{ '/assets/images/reports/000-1.webp' | absolute_url }}"
+  ],
   "publisher": {
     "@type": "Organization",
     "name": "國際扶輪3522地區",
@@ -20,25 +26,788 @@ description: 2026年國際扶輪3522地區萬聖節嘉年華會・記者會快�
 }
 </script>
 
+<!-- 多重路徑容錯樣式引入 (保障本機預覽、Live Server、file:// 及 GitHub Pages 永不失效) -->
+<link rel="stylesheet" href="../assets/css/style.css">
 
+<!-- 記者會快報專屬樣式 -->
+<style>
+/* 核心設計變數回退保障 */
+:root {
+  --bg-dark: #482d62;
+  --bg-darker: #3c2452;
+  --bg-page: #331e45;
+  --color-plum: #634566;
+  --color-plum-dark: #392860;
+  --halloween-orange: #ff7518;
+  --halloween-orange-hover: #ff5414;
+  --halloween-gold: #fca311;
+  --halloween-gold-light: #ffbe0b;
+  --text-white: #ffffff;
+  --text-light: #f6effc;
+  --text-muted: #cfbde3;
+  --card-dark: #432a5a;
+  --card-border: #624082;
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --shadow-box: 0 8px 30px rgba(0, 0, 0, 0.35);
+  --max-width: 1200px;
+}
+
+/* 頁面基礎結構保險 */
+body {
+  background-color: var(--bg-page);
+  color: var(--text-light);
+  font-family: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.8;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.section {
+  padding: 45px 0;
+  position: relative;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 8px;
+}
+
+.page-hero {
+  background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-darker) 100%);
+  border-bottom: 2px solid var(--card-border);
+  padding: 45px 20px 40px;
+  text-align: center;
+  position: relative;
+}
+
+.page-hero-title {
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+
+.page-hero-desc {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  max-width: 720px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.press-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, rgba(255, 117, 24, 0.22) 0%, rgba(252, 163, 17, 0.26) 100%);
+  border: 1px solid rgba(252, 163, 17, 0.6);
+  color: #ffe082;
+  font-weight: 700;
+  font-size: 0.92rem;
+  padding: 5px 16px;
+  border-radius: 25px;
+  margin-bottom: 12px;
+}
+
+/* 快速跳轉錨點選單 */
+.press-anchor-nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 25px 0 40px;
+}
+
+.press-nav-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--card-dark);
+  color: var(--text-light);
+  border: 1px solid var(--card-border);
+  border-radius: 30px;
+  padding: 8px 18px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.press-nav-pill:hover {
+  background: linear-gradient(135deg, var(--halloween-orange) 0%, var(--halloween-gold) 100%);
+  color: #1a0826;
+  border-color: transparent;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(255, 117, 24, 0.35);
+}
+
+/* 圖片區塊通用樣式 */
+.press-gallery-section {
+  position: relative;
+  margin-bottom: 50px;
+}
+
+/* 圖片區塊 #1：主焦點大卡與雙聯排版 */
+.press-block1-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 22px;
+  margin-bottom: 22px;
+}
+
+.press-block1-subgrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* 拍立得手帳剪貼風格相片卡 (無點擊放大、無游標手勢) */
+.press-photo-card {
+  background: #2e173e;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-md);
+  padding: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s cubic-bezier(0.2, 0, 0.2, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+.press-photo-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5), 0 0 16px rgba(252, 163, 17, 0.25);
+  border-color: var(--halloween-gold);
+  z-index: 2;
+}
+
+@media (min-width: 961px) {
+  .press-block1-subgrid .press-photo-card:nth-child(1) { transform: rotate(-0.8deg); }
+  .press-block1-subgrid .press-photo-card:nth-child(2) { transform: rotate(1deg); }
+  .press-block1-subgrid .press-photo-card:nth-child(3) { transform: rotate(-0.6deg); }
+  .press-block1-subgrid .press-photo-card:hover { transform: translateY(-5px) scale(1.015) rotate(0deg); }
+}
+
+.press-img-wrap {
+  width: 100%;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  position: relative;
+  background: #180a22;
+}
+
+.press-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.press-card-caption {
+  padding: 10px 4px 2px;
+  text-align: center;
+}
+
+.press-card-title {
+  color: #ffe082;
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* 圖片區塊 #2：現場活力紀實 */
+.press-block2-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.press-block2-grid .card-span-2 {
+  grid-column: span 2;
+}
+
+/* 新聞連結專區：潮流報攤卡片牆 */
+.press-news-section {
+  background: 
+    radial-gradient(ellipse 65% 50% at 20% 20%, rgba(255, 117, 24, 0.14) 0%, transparent 60%),
+    radial-gradient(ellipse 70% 55% at 80% 80%, rgba(252, 163, 17, 0.12) 0%, transparent 60%),
+    linear-gradient(135deg, #2b1338 0%, #3e1b52 50%, #250f32 100%);
+  border: 2px solid rgba(252, 163, 17, 0.35);
+  border-radius: var(--radius-lg);
+  padding: 40px 30px;
+  margin-top: 40px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+  position: relative;
+}
+
+.news-media-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.news-media-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-md);
+  padding: 15px 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-decoration: none;
+  transition: all 0.25s cubic-bezier(0.2, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.news-media-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--halloween-orange);
+  transition: width 0.25s ease;
+}
+
+.news-media-card:hover {
+  transform: translateY(-3px) scale(1.015);
+  background: rgba(255, 255, 255, 0.12);
+  border-color: var(--halloween-gold);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35), 0 0 16px rgba(252, 163, 17, 0.25);
+}
+
+.news-media-card:hover::before {
+  width: 6px;
+  background: var(--halloween-gold);
+}
+
+.news-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.news-outlet-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 10px;
+  background: rgba(252, 163, 17, 0.18);
+  color: #ffe082;
+  border: 1px solid rgba(252, 163, 17, 0.3);
+}
+
+.news-outlet-name {
+  color: #ffffff;
+  font-size: 1.02rem;
+  font-weight: 700;
+  margin: 3px 0 5px;
+  line-height: 1.35;
+}
+
+.news-card-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--halloween-gold);
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+.news-media-card:hover .news-card-action {
+  color: #ffffff;
+  transform: translateX(3px);
+  transition: transform 0.2s ease;
+}
+
+/* 響應式佈局適配 */
+@media (max-width: 960px) {
+  .press-block1-grid {
+    grid-template-columns: 1fr;
+  }
+  .press-block1-subgrid {
+    grid-template-columns: 1fr;
+  }
+  .press-block2-grid {
+    grid-template-columns: 1fr;
+  }
+  .press-block2-grid .card-span-2 {
+    grid-column: span 1;
+  }
+  .news-media-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .news-media-grid {
+    grid-template-columns: 1fr;
+  }
+  .press-news-section {
+    padding: 26px 16px;
+  }
+  .page-hero-title {
+    font-size: 1.85rem;
+  }
+  .section-title {
+    font-size: 1.6rem;
+  }
+}
+</style>
+
+<!-- Page Hero 頂端主視覺橫幅 -->
 <div class="page-hero">
-  <div class="container">
-    <h1 class="page-hero-title">📢 記者會快報</h1>
-    <p class="page-hero-desc">扶輪大手牽小手 萬聖節嘉年華會最新新聞與活動發布專區</p>
+  <div class="container" style="position: relative; z-index: 2;">
+    <div class="press-hero-badge">
+      <span>🎃</span>
+      <span>扶輪大手牽小手</span>
+      <span>✨</span>
+    </div>
+    <h1 class="page-hero-title">📢 慈善萬聖嘉年華 盛大記者會快報</h1>
+    <p class="page-hero-desc">
+      2026年10月2日國際扶輪3522地區攜手台北市政府社會局召開盛大記者會。
+    </p>
   </div>
 </div>
 
-<section class="section">
+<section class="section" style="padding-top: 0;">
   <div class="container">
-    <!-- 內容先空白預留區 -->
-    <div style="min-height: 380px; display: flex; align-items: center; justify-content: center; text-align: center; padding: 40px 20px;">
-      <div style="background: var(--card-dark); border: 2px dashed rgba(252, 163, 17, 0.4); border-radius: var(--radius-md); padding: 50px 30px; max-width: 600px; width: 100%; box-shadow: var(--shadow-box);">
-        <div style="font-size: 3rem; margin-bottom: 16px;">📰</div>
-        <h2 style="color: var(--halloween-gold); font-size: 1.45rem; margin-bottom: 12px;">記者會快訊整理中</h2>
-        <p style="color: var(--text-muted); font-size: 0.98rem; line-height: 1.8;">
-          官方新聞稿、現場焦點與精采活動發布即將在此公布，敬請密切鎖定！
-        </p>
+    
+    <!-- 快速錨點跳轉 -->
+    <div class="press-anchor-nav">
+      <a href="#press-block1" class="press-nav-pill">
+        <span>🌟</span> 焦點高光
+      </a>
+      <a href="#press-block2" class="press-nav-pill">
+        <span>📸</span> 現場花絮
+      </a>
+      <a href="#press-news" class="press-nav-pill">
+        <span>📰</span> 24家媒體報導
+      </a>
+    </div>
+
+    <!-- =========================================
+         圖片區塊 #1：焦點高光・記者會盛大啟動
+         包含 000-1, 000-2, 001, 002, 003
+         ========================================= -->
+    <div class="press-gallery-section" id="press-block1">
+      <div class="section-header">
+        <h2 class="section-title">🌟 焦點高光・記者會盛大啟動</h2>
+      </div>
+
+      <!-- 主焦點兩大合影 (000-2 大合影 ＋ 000-1 主辦社合影) -->
+      <div class="press-block1-grid">
+        <!-- 000-2：全場大合影 -->
+        <div class="press-photo-card">
+          <div class="press-img-wrap" style="aspect-ratio: 16 / 10;">
+            <img src="{{ '/assets/images/reports/000-2.webp' | relative_url }}" alt="2026扶輪大手牽小手慈善萬聖節嘉年華記者會全場大合照" loading="lazy">
+          </div>
+          <div class="press-card-caption">
+            <div class="press-card-title">🎉 全體社友、表演團隊與貴賓大合影</div>
+          </div>
+        </div>
+
+        <!-- 000-1：貴賓手持南瓜宣傳板合影 -->
+        <div class="press-photo-card">
+          <div class="press-img-wrap" style="aspect-ratio: 16 / 10;">
+            <img src="{{ '/assets/images/reports/000-1.webp' | relative_url }}" alt="國際扶輪3522地區各社與台北市政府社會局手持萬聖南瓜看板合影" loading="lazy">
+          </div>
+          <div class="press-card-caption">
+            <div class="press-card-title">🎃 國際扶輪3522地區與市府社會局合影</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 三聯排版 (001 致詞, 002 特寫, 003 捐贈支票) -->
+      <div class="press-block1-subgrid">
+        <!-- 001：龍明道 Auto 總監致詞 -->
+        <div class="press-photo-card">
+          <div class="press-img-wrap" style="aspect-ratio: 4 / 3;">
+            <img src="{{ '/assets/images/reports/001.webp' | relative_url }}" alt="國際扶輪3522地區總監龍明道於記者會開場致詞" loading="lazy">
+          </div>
+          <div class="press-card-caption">
+            <div class="press-card-title">🎙️ 龍明道 Auto 總監致詞</div>
+          </div>
+        </div>
+
+        <!-- 002：總監致詞特寫與願景宣示 -->
+        <div class="press-photo-card">
+          <div class="press-img-wrap" style="aspect-ratio: 4 / 3;">
+            <img src="{{ '/assets/images/reports/002.webp' | relative_url }}" alt="龍明道總監詳細介紹萬聖節嘉年華活動亮點" loading="lazy">
+          </div>
+          <div class="press-card-caption">
+            <div class="press-card-title">✨ 宣示活動四大精彩主軸</div>
+          </div>
+        </div>
+
+        <!-- 003：愛心捐贈儀式 -->
+        <div class="press-photo-card">
+          <div class="press-img-wrap" style="aspect-ratio: 4 / 3;">
+            <img src="{{ '/assets/images/reports/003.webp' | relative_url }}" alt="國際扶輪3522地區愛心捐贈台北市社會局支票頒贈儀式" loading="lazy">
+          </div>
+          <div class="press-card-caption">
+            <div class="press-card-title">💝 愛心捐款支票頒贈儀式</div>
+          </div>
+        </div>
       </div>
     </div>
+
+    <!-- =========================================
+         圖片區塊 #2：現場活力紀實與幕後花絮
+         包含 006, 007, 011, 110, 111
+         ========================================= -->
+    <div class="press-gallery-section" id="press-block2">
+      <div class="section-header">
+        <h2 class="section-title">📸 現場花絮・活力紀實</h2>
+      </div>
+
+      <div class="press-block2-grid">
+        <!-- 111：萬聖變裝萌鬼熱舞 -->
+        <div class="press-photo-card card-span-2">
+          <div class="press-img-wrap" style="aspect-ratio: 16 / 9;">
+            <img src="{{ '/assets/images/reports/111.webp' | relative_url }}" alt="萬聖變裝熱舞開場秀現場精彩演出" loading="lazy">
+          </div>
+          <div class="press-card-caption">
+            <div class="press-card-title">💃 萬聖變裝萌鬼熱舞開場</div>
+          </div>
+        </div>
+
+        <!-- 110：報到接待處花絮 -->
+        <div class="press-photo-card">
+          <div class="press-img-wrap" style="aspect-ratio: 4 / 3;">
+            <img src="{{ '/assets/images/reports/110.webp' | relative_url }}" alt="記者會迎賓報到處現場來賓簽到" loading="lazy">
+          </div>
+          <div class="press-card-caption">
+            <div class="press-card-title">📝 記者會迎賓報到處</div>
+          </div>
+        </div>
+
+        <!-- 006：社會局局長致贈感謝狀 - 環球扶輪社 -->
+        <div class="press-photo-card">
+          <div class="press-img-wrap" style="aspect-ratio: 4 / 3;">
+            <img src="{{ '/assets/images/reports/006.webp' | relative_url }}" alt="台北市政府社會局頒發感謝狀致贈台北市環球扶輪社" loading="lazy">
+          </div>
+          <div class="press-card-caption">
+            <div class="press-card-title">📜 社會局致贈環球社感謝狀</div>
+          </div>
+        </div>
+
+        <!-- 007：社會局局長致贈感謝狀 - 活動主委 PP Frank -->
+        <div class="press-photo-card">
+          <div class="press-img-wrap" style="aspect-ratio: 4 / 3;">
+            <img src="{{ '/assets/images/reports/007.webp' | relative_url }}" alt="台北市政府社會局頒發感謝狀致贈活動主委PP Frank" loading="lazy">
+          </div>
+          <div class="press-card-caption">
+            <div class="press-card-title">🏆 社會局致贈主委 PP Frank 感謝狀</div>
+          </div>
+        </div>
+
+        <!-- 011：環球扶輪社代表登台致詞 -->
+        <div class="press-photo-card">
+          <div class="press-img-wrap" style="aspect-ratio: 4 / 3;">
+            <img src="{{ '/assets/images/reports/011.webp' | relative_url }}" alt="台北市環球扶輪社代表登台致詞分享籌備亮點" loading="lazy">
+          </div>
+          <div class="press-card-caption">
+            <div class="press-card-title">🎤 環球扶輪社代表致詞</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- =========================================
+         新聞連接區塊：24 家主流媒體報導
+         ========================================= -->
+    <div class="press-news-section" id="press-news">
+      <div style="text-align: center; max-width: 720px; margin: 0 auto;">
+        <h2 style="color: var(--halloween-gold); font-size: 1.85rem; font-weight: 800; margin: 0 0 6px;">
+          📰 24 家新聞媒體報導
+        </h2>
+      </div>
+
+      <div class="news-media-grid">
+        <!-- 1. 經濟日報 -->
+        <a href="https://money.udn.com/money/story/6722/9790613" target="_blank" rel="noopener noreferrer" class="news-media-card">
+          <div class="news-card-header">
+            <span class="news-outlet-badge">財經</span>
+            <span style="font-size: 1.1rem;">📈</span>
+          </div>
+          <div class="news-outlet-name">經濟日報</div>
+          <div class="news-card-action">閱讀報導 ↗</div>
+        </a>
+
+        <!-- 2. 工商時報 -->
+        <a href="https://www.ctee.com.tw/news/20261002701968-431208" target="_blank" rel="noopener noreferrer" class="news-media-card">
+          <div class="news-card-header">
+            <span class="news-outlet-badge">財經</span>
+            <span style="font-size: 1.1rem;">📊</span>
+          </div>
+          <div class="news-outlet-name">工商時報</div>
+          <div class="news-card-action">閱讀報導 ↗</div>
+        </a>
+
+        <!-- 3. LINE Today -->
+        <a href="https://today.line.me/tw/v3/article/VxpNL5g" target="_blank" rel="noopener noreferrer" class="news-media-card">
+          <div class="news-card-header">
+            <span class="news-outlet-badge">門戶</span>
+            <span style="font-size: 1.1rem;">💬</span>
+          </div>
+          <div class="news-outlet-name">LINE Today</div>
+          <div class="news-card-action">閱讀報導 ↗</div>
+        </a>
+
+        <!-- 4. 蕃薯藤 -->
+        <a href="https://n.yam.com/Article/20261002443952" target="_blank" rel="noopener noreferrer" class="news-media-card">
+          <div class="news-card-header">
+            <span class="news-outlet-badge">門戶</span>
+            <span style="font-size: 1.1rem;">🍠</span>
+          </div>
+          <div class="news-outlet-name">蕃薯藤</div>
+          <div class="news-card-action">閱讀報導 ↗</div>
+        </a>
+
+        <!-- 5. 行銷人 -->
+        <a href="https://www.marketersgo.com/uncategorized/202610/%E6%89%B6%E8%BC%AA%E5%A4%A7%E6%89%8B%E7%89%BD%E5%B0%8F%E6%89%8B%E5%86%8D%E5%BA%A6%E5%95%9F%E8%88%AA-2026-%E7%AC%AC%E4%BA%8C%E5%B1%86%E6%85%88%E5%96%84%E8%90%AC%E8%81%96%E7%AF%80%E5%98%89%E5%B9%B4/" target="_blank" rel="noopener noreferrer" class="news-media-card">
+          <div class="news-card-header">
+            <span class="news-outlet-badge">觀點</span>
+            <span style="font-size: 1.1rem;">💡</span>
+          </div>
+          <div class="news-outlet-name">行銷人</div>
+          <div class="news-card-action">閱讀報導 ↗</div>
+        </a>
+
+        <!-- 6. 台灣產經新聞 -->
+        <a href="https://news.taiwannet.com.tw/news/222093/%E6%89%B6%E8%BC%AA%E5%A4%A7%E6%89%8B%E7%89%BD%E5%B0%8F%E6%89%8B%E5%86%8D%E5%BA%A6%E5%95%9F%E8%88%AA2026-%E7%AC%AC%E4%BA%8C%E5%B1%86%E6%85%88%E5%96%84%E8%90%AC%E8%81%96%E7%AF%80%E5%98%89%E5%B9%B4%E8%8F%AF-%E4%B8%B2%E8%81%AF%E6%89%B6%E8%BC%AA-%E4%BC%81%E6%A5%AD%E8%88%87%E7%A4%BE%E6%9C%83%E5%8A%9B%E9%87%8F%E7%82%BA%E6%84%9B%E5%90%8C%E8%A1%8C.html" target="_blank" rel="noopener noreferrer" class="news-media-card">
+          <div class="news-card-header">
+            <span class="news-outlet-badge">產經</span>
+            <span style="font-size: 1.1rem;">🏢</span>
+          </div>
+          <div class="news-outlet-name">台灣產經新聞</div>
+          <div class="news-card-action">閱讀報導 ↗</div>
+        </a>
+
+        <!-- 7. 商傳媒 -->
+        <a href="https://sunmedia.tw/news/collaborative/1i4pc1MpcXmZHD8KvBPi05uC9hZiCbYotnU4fsG6wR03x47yoHgUTx4O" target="_blank" rel="noopener noreferrer" class="news-media-card">
+          <div class="news-card-header">
+            <span class="news-outlet-badge">商務</span>
+            <span style="font-size: 1.1rem;">💼</span>
+          </div>
+          <div class="news-outlet-name">商傳媒</div>
+          <div class="news-card-action">閱讀報導 ↗</div>
+        </a>
+
+        <!-- 8. 台灣新聞雲 -->
+        <a href="https://886.news/archives/364836" target="_blank" rel="noopener noreferrer" class="news-media-card">
+          <div class="news-card-header">
+            <span class="news-outlet-badge">快訊</span>
+            <span style="font-size: 1.1rem;">☁️</span>
+          </div>
+          <div class="news-outlet-name">台灣新聞雲</div>
+          <div class="news-card-action">閱讀報導 ↗</div>
+        </a>
+
+        <!-- 9. 中華通訊社 -->
+        <a href="https://water-transport.org/archives/29122" target="_blank" rel="noopener noreferrer" class="news-media-card">
+          <div class="news-card-header">
+            <span class="news-outlet-badge">通訊</span>
+            <span style="font-size: 1.1rem;">📡</span>
+          </div>
+          <div class="news-outlet-name">中華通訊社</div>
+          <div class="news-card-action">閱讀報導 ↗</div>
+        </a>
+
+        <!-- 10. 輪傳媒 -->
+        <a href="https://www.news.yyshinelab.com.tw/2026/10/2026-352220.html" target="_blank" rel="noopener noreferrer" class="news-media-card">
+          <div class="news-card-header">
+            <span class="news-outlet-badge">扶輪</span>
+            <span style="font-size: 1.1rem;">⚙️</span>
+          </div>
+          <div class="news-outlet-name">輪傳媒</div>
+          <div class="news-card-action">閱讀報導 ↗</div>
+        </a>
+
+        <!-- 11. 台北新聞網 (專題一) -->
+        <a href="https://tnews.cc/02/News/View/1193881?source=Articles" target="_blank" rel="noopener noreferrer" class="news-media-card">
+          <div class="news-card-header">
+            <span class="news-outlet-badge">焦點</span>
+            <span style="font-size: 1.1rem;">🏙️</span>
+          </div>
+          <div class="news-outlet-name">台北新聞網（焦點）</div>
+          <div class="news-card-action">閱讀報導 ↗</div>
+        </a>
+
+        <!-- 12. 台北新聞網 (專題二) -->
+        <a href="https://tnews.cc/02/News/View/1193858?source=Articles" target="_blank" rel="noopener noreferrer" class="news-media-card">
+          <div class="news-card-header">
+            <span class="news-outlet-badge">市政</span>
+            <span style="font-size: 1.1rem;">🏛️</span>
+          </div>
+          <div class="news-outlet-name">台北新聞網（市政）</div>
+          <div class="news-card-action">閱讀報導 ↗</div>
+        </a>
+
+        <!-- 13. 新北樹報 -->
+        <a href="https://www.ntsn.com.tw/archives/4849" target="_blank" rel="noopener noreferrer" class="news-media-card">
+          <div class="news-card-header">
+            <span class="news-outlet-badge">在地</span>
+            <span style="font-size: 1.1rem;">🌳</span>
+          </div>
+          <div class="news-outlet-name">新北樹報</div>
+          <div class="news-card-action">閱讀報導 ↗</div>
+        </a>
+
+        <!-- 14. 展媒新觀點 -->
+        <a href="https://enews.shinyqtaiwan.com/posts/2360" target="_blank" rel="noopener noreferrer" class="news-media-card">
+          <div class="news-card-header">
+            <span class="news-outlet-badge">視野</span>
+            <span style="font-size: 1.1rem;">🔍</span>
+          </div>
+          <div class="news-outlet-name">展媒新觀點</div>
+          <div class="news-card-action">閱讀報導 ↗</div>
+        </a>
+
+        <!-- 15. 民生好報 -->
+        <a href="https://17news.net/archives/340806" target="_blank" rel="noopener noreferrer" class="news-media-card">
+          <div class="news-card-header">
+            <span class="news-outlet-badge">生活</span>
+            <span style="font-size: 1.1rem;">📰</span>
+          </div>
+          <div class="news-outlet-name">民生好報</div>
+          <div class="news-card-action">閱讀報導 ↗</div>
+        </a>
+
+        <!-- 16. 台灣電報 -->
+        <a href="https://enn.tw/787436/" target="_blank" rel="noopener noreferrer" class="news-media-card">
+          <div class="news-card-header">
+            <span class="news-outlet-badge">即時</span>
+            <span style="font-size: 1.1rem;">⚡</span>
+          </div>
+          <div class="news-outlet-name">台灣電報</div>
+          <div class="news-card-action">閱讀報導 ↗</div>
+        </a>
+
+        <!-- 17. PChome 新聞 -->
+        <a href="https://news.pchome.com.tw/magazine/report/li/housestyle/15860/179087040019890094005.htm" target="_blank" rel="noopener noreferrer" class="news-media-card">
+          <div class="news-card-header">
+            <span class="news-outlet-badge">門戶</span>
+            <span style="font-size: 1.1rem;">🛍️</span>
+          </div>
+          <div class="news-outlet-name">PChome 新聞</div>
+          <div class="news-card-action">閱讀報導 ↗</div>
+        </a>
+
+        <!-- 18. PChome 家居 -->
+        <a href="https://mypaper.pchome.com.tw/housestyle68/post/1385279749" target="_blank" rel="noopener noreferrer" class="news-media-card">
+          <div class="news-card-header">
+            <span class="news-outlet-badge">家居</span>
+            <span style="font-size: 1.1rem;">🏡</span>
+          </div>
+          <div class="news-outlet-name">PChome 家居</div>
+          <div class="news-card-action">閱讀報導 ↗</div>
+        </a>
+
+        <!-- 19. UDN 部落格-家居 -->
+        <a href="https://blog.udn.com/housestyle68/192575550" target="_blank" rel="noopener noreferrer" class="news-media-card">
+          <div class="news-card-header">
+            <span class="news-outlet-badge">聯合</span>
+            <span style="font-size: 1.1rem;">✍️</span>
+          </div>
+          <div class="news-outlet-name">UDN 部落格・家居</div>
+          <div class="news-card-action">閱讀報導 ↗</div>
+        </a>
+
+        <!-- 20. 臉書專案分享 -->
+        <a href="https://www.facebook.com/House.Style.fans/posts/pfbid02yPvXnpy8BPkXaWyVsCuG7t2WJs3HXcbt987woFU69exXWCX2YjG5Ge82bCV3dwwDl" target="_blank" rel="noopener noreferrer" class="news-media-card">
+          <div class="news-card-header">
+            <span class="news-outlet-badge">社群</span>
+            <span style="font-size: 1.1rem;">👍</span>
+          </div>
+          <div class="news-outlet-name">House Style 臉書</div>
+          <div class="news-card-action">閱讀報導 ↗</div>
+        </a>
+
+        <!-- 21. 閱政治 -->
+        <a href="https://www.readgov.com/26315/" target="_blank" rel="noopener noreferrer" class="news-media-card">
+          <div class="news-card-header">
+            <span class="news-outlet-badge">政經</span>
+            <span style="font-size: 1.1rem;">👓</span>
+          </div>
+          <div class="news-outlet-name">閱政治</div>
+          <div class="news-card-action">閱讀報導 ↗</div>
+        </a>
+
+        <!-- 22. 西太 -->
+        <a href="https://pse.is/9prbva" target="_blank" rel="noopener noreferrer" class="news-media-card">
+          <div class="news-card-header">
+            <span class="news-outlet-badge">推薦</span>
+            <span style="font-size: 1.1rem;">🔥</span>
+          </div>
+          <div class="news-outlet-name">西太資訊網</div>
+          <div class="news-card-action">閱讀報導 ↗</div>
+        </a>
+
+        <!-- 23. iBEAUTY -->
+        <a href="https://ibeauty.media/archives/219075" target="_blank" rel="noopener noreferrer" class="news-media-card">
+          <div class="news-card-header">
+            <span class="news-outlet-badge">時尚</span>
+            <span style="font-size: 1.1rem;">💄</span>
+          </div>
+          <div class="news-outlet-name">iBEAUTY</div>
+          <div class="news-card-action">閱讀報導 ↗</div>
+        </a>
+
+        <!-- 24. 奧丁丁新聞 -->
+        <a href="https://news.owlting.com/articles/1465523" target="_blank" rel="noopener noreferrer" class="news-media-card">
+          <div class="news-card-header">
+            <span class="news-outlet-badge">休閒</span>
+            <span style="font-size: 1.1rem;">🦉</span>
+          </div>
+          <div class="news-outlet-name">奧丁丁新聞</div>
+          <div class="news-card-action">閱讀報導 ↗</div>
+        </a>
+      </div>
+    </div>
+
   </div>
 </section>
+
+<script>
+  // 圖片路徑環境容錯 (若本地伺服器無 /Rotary-Happy-Halloween/ 前綴自動自我修復)
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.press-img-wrap img').forEach(function(img) {
+      img.addEventListener('error', function() {
+        if (this.src.indexOf('/Rotary-Happy-Halloween/') !== -1) {
+          this.src = this.src.replace('/Rotary-Happy-Halloween/', '/');
+        } else if (!this.dataset.fallbackAttempted) {
+          this.dataset.fallbackAttempted = '1';
+          var filename = this.src.split('/').pop();
+          this.src = '../assets/images/reports/' + filename;
+        }
+      });
+    });
+  });
+</script>
