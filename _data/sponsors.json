@@ -53,9 +53,16 @@
     { "company": "璽愛扶青計畫", "sponsor": "CP Ivy", "club": "璽愛扶輪社" }
   ],
   "material_sponsors": [
-    { "item": "兒童專用立體口罩 300 個", "sponsor": "趙國鈞", "club": "東湖扶輪社" },
+    { "item": "兒童口罩 300 個", "sponsor": "趙國鈞", "club": "東湖扶輪社" },
+    { "item": "動物公仔 100 個", "sponsor": "Wendy", "club": "東創扶輪社" },
+    { "item": "指甲貼片35個 ｜ 南瓜提袋100個", "sponsor": "IPP Mei", "club": "環球扶輪社" },
+    { "item": "按摩小章魚 100 個", "sponsor": "吳國光", "club": "天運扶輪社" },
+    { "item": "高級小牛皮零錢包 20 個", "sponsor": "周春懋", "club": "東義扶輪社" },
     { "item": "彩窗軌道磁力片 5 組", "sponsor": "Fion", "club": "天際扶輪社" },
     { "item": "呈易美學牙醫潔牙 100 組", "sponsor": "Jiuan", "club": "天際扶輪社" },
-    { "item": "超速遙控賽車 3 台", "sponsor": "Diesel", "club": "天際扶輪社" }
+    { "item": "遙控車2台 ｜ 戰鬥陀螺2組 ｜ 桌遊1組", "sponsor": "Diesel", "club": "天際扶輪社" },
+    { "item": "萬代BANPRESTO鬼滅之刃珠世景品公仔 1 個", "sponsor": "Skyler", "club": "忠美扶輪社" },
+    { "item": "寶可夢貼紙一批", "sponsor": "Lin", "club": "東華扶輪社" },
+    { "item": "鬍子國王小蛋捲 100 包", "sponsor": "呂承衞", "club": "東義扶輪社" }
   ]
 }
