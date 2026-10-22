@@ -36,12 +36,12 @@ description: 2026年國際扶輪3522地區萬聖節嘉年華會・舞台表演�
   </div>
 </div>
 
-<!-- 全日舞台節目時程表 (暫時隱藏) -->
-<section class="section" style="display: none;">
+<!-- 全日舞台節目時程表 -->
+<section class="section">
   <div class="container">
     <div class="section-header">
       <h2 class="section-title">全日舞台節目時程表</h2>
-      <p class="section-desc">2026年10月26日活動當天 11:00 至 16:00 主舞台精彩演出與抽獎時程</p>
+      <p class="section-desc">2026年10月26日活動當天 11:00 至 17:00 嘉年華全區流程與節目時程表</p>
     </div>
 
     <!-- 主持人向左對齊資訊欄 -->
@@ -61,16 +61,16 @@ description: 2026年國際扶輪3522地區萬聖節嘉年華會・舞台表演�
         <thead>
           <tr>
             <th style="width: 170px;">時間</th>
-            <th>流程項目與精采內容</th>
-            <th>主責／出場人員</th>
+            <th style="width: 250px;">活動內容</th>
+            <th>說明</th>
           </tr>
         </thead>
         <tbody>
           {% for item in site.data.timeline.schedule %}
-          <tr class="{% if item.title contains '開幕' or item.title contains '蔣萬安' or item.title contains '啟動' or item.title contains '頒獎' or item.title contains '抽獎' %}schedule-highlight-row{% endif %}">
+          <tr class="{% if item.title contains '開幕' or item.title contains '頒獎' or item.title contains '摸彩' %}schedule-highlight-row{% endif %}">
             <td class="schedule-time-col">{{ item.time }}</td>
-            <td>{{ item.title }}</td>
-            <td style="color: var(--text-muted);">{{ item.performers }}</td>
+            <td style="font-weight: 600;">{{ item.title }}</td>
+            <td style="color: var(--text-muted);">{{ item.desc | default: item.performers }}</td>
           </tr>
           {% endfor %}
         </tbody>
